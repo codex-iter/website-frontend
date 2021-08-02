@@ -1,0 +1,132 @@
+.input_outer_contact{
+    width: 504px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border:2px solid #ededed;
+    border-radius: 15px;
+}
+.input_outer_contact_message{
+    width: 504px;
+    height: 101px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border:2px solid #ededed;
+    border-radius: 15px;
+}
+.input_outer_about{
+    width: 317.95px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border:2px solid #ededed;
+    border-radius: 20px;
+}
+.input_outer_contact input{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    height: 90%;
+    width: 80%;
+    margin-left: 16px;
+     font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.33px;
+    color: #DEDADA;
+}
+.input_outer_about input{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    height: 90%;
+    width: 80%;
+    margin-left: 16px;
+     font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.33px;
+    color: #DEDADA;
+}
+.input_outer_contact_message textarea{
+    resize: none;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    height: 90%;
+    width: 80%;
+    margin-left: 16px;
+     font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.33px;
+    color: #DEDADA;
+}
+.input_outer_contact input::placeholder{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.33px;
+    color: #DEDADA;
+}
+.input_outer_contact_message textarea::placeholder{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.33px;
+    color: #DEDADA; 
+}
+.input_outer_about input::placeholder{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    letter-spacing: -0.33px;
+    color: #DEDADA;
+}
+.svg_span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: max-content;
+    margin-left: 24px;
+}
+.textarea{
+    margin-left: 24px !important;
+}
+@media screen and (max-width:640px) {
+    .input_outer_contact{
+    max-width: 90%;
+    width: 504px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border:2px solid #ededed;
+    border-radius: 15px;
+}
+.input_outer_contact_message{
+    max-width: 90%;
+    width: 504px;
+    height: 101px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border:2px solid #ededed;
+    border-radius: 15px;
+}
+}
