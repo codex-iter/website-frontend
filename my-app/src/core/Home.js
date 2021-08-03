@@ -1,6 +1,6 @@
 import React from "react";
 import Base from "./Base";
-import banner from "../images/19362653 1.png";
+import banner from "../Assets/Images/19362653 1.png";
 import Slider from "./Slider";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";

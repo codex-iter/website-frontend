@@ -19,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -222,7 +223,7 @@ code {
   color: white;
   font-size: 20px;
   text-align: center;
-  background-image: url(./images/emial.png);
+  background-image: url(./Assets/Images/emial.png);
   background-color: var(--clr-primary);
   background-position: 10px 10px;
   background-repeat: no-repeat;
