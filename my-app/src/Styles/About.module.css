@@ -69,3 +69,41 @@ margin-bottom: 20px;
 .input_email{
     margin-bottom: 20px;
 }
+
+@media screen and (min-width:640px) and (max-width:850px) {
+.about_content{
+    flex-direction: column;
+}
+.content_left{
+    width: 100%;
+}
+.content_right{
+    width: 100%;
+    margin-top: 80px;
+}
+}
+@media screen and (max-width:640px) {
+.about_content{
+    flex-direction: column;
+}
+.content_left{
+    width: calc(100% - 20px);
+}
+.content_heading{
+    margin-left: 20px;
+}
+.content_para{
+    margin-left: 20px;
+    width: calc(100% - 20px);
+}
+.content_right{
+    width: 100%;
+    margin-top: 50px;
+}
+.newsletter_heading{
+    text-align: center;
+}
+.button_margin{
+    margin-bottom: 30px;
+}
+}

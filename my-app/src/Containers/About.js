@@ -32,7 +32,7 @@ const About = () => {
                         path="" handleChange={ (e) => setEmail(e.target.value) }
                         svg={ emailSvg } />
                     </div>
-                    <div>
+                    <div className={Styles.button_margin}> 
                         <CustonButton text="Subscribe" page="" handleClick={ handleClick }/>
                     </div>
                 </div>
