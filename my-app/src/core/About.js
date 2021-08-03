@@ -11,36 +11,50 @@ const About = () => {
         
     }
     return (
-        <Base>
-        <div className={ Styles.about_outer }>
-            <div className={ Styles.about_banner }>
-                <div><img src={ banner } alt=""/></div>
+      <Base>
+        <div className={Styles.about_outer}>
+          <div className={Styles.about_banner}>
+            <div>
+              <img src={banner} alt='' />
             </div>
-            <div className={ Styles.about_content }>
-                <div className={ Styles.content_left }>
-                    <div className={ Styles.content_heading }>Our Story!</div>
-                    <div className={ Styles.content_para }>
-                        Mauris porttitor fermentum massa, non ullamcorper turpis ornare nec. Suspendisse arcu odio, hendrerit non tempor vel, gravida ac libero. Aliquam accumsan bibendum ante. Cras quis urna at augue convallis interdum. 
-                    </div>
-                </div>
-                <div className={ Styles.content_right }>
-                    <div className={ Styles.newsletter_heading }>Join our monthly Newsletter</div>
-                    <div className={Styles.input_email}>
-                        <CustomInput
-                        name="email"
-                        value={ email }
-                        type="text"
-                        placeholder="Email"
-                        path="" handleChange={ (e) => setEmail(e.target.value) }
-                        svg={ emailSvg } />
-                    </div>
-                    <div className={Styles.button_margin}> 
-                        <CustonButton text="Subscribe" page="" handleClick={ handleClick }/>
-                    </div>
-                </div>
+          </div>
+          <div className={Styles.about_content}>
+            <div className={Styles.content_left}>
+              <div className={Styles.content_heading}>Our Story!</div>
+              <div className={Styles.content_para}>
+                Mauris porttitor fermentum massa, non ullamcorper turpis ornare
+                nec. Suspendisse arcu odio, hendrerit non tempor vel, gravida ac
+                libero. Aliquam accumsan bibendum ante. Cras quis urna at augue
+                convallis interdum.
+              </div>
             </div>
-        </div></Base>
-    )
+            <div className={Styles.content_right}>
+              <div className={Styles.newsletter_heading}>
+                Join our monthly Newsletter
+              </div>
+              <div className={Styles.input_email}>
+                <CustomInput
+                  name='email'
+                  value={email}
+                  type='text'
+                  placeholder='Email'
+                  path=''
+                  handleChange={(e) => setEmail(e.target.value)}
+                  svg={emailSvg}
+                />
+              </div>
+              <div className={Styles.button_margin}>
+                <CustonButton
+                  text='Subscribe'
+                  page=''
+                  handleClick={handleClick}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Base>
+    );
 }
 
 export default About
