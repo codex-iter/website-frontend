@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
-import Logo from "../images/codex logo 2.png";
+import Logo from "../Assets/Images/codex logo 2.png";
 import ContactInfo from "./ContactInfo";
 
 const Base = ({ children }) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import Logo from "../images/codex logo 2.png";
+import Logo from "../Assets/Images/codex logo 2.png";
 import "../Styles/navbar.css";
 
 const currentTab = (history, path) => {

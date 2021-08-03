@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Base from "../core/Base"
+import Base from "./Base"
 import Styles from "../Styles/About.module.css";
 import banner from "../Assets/Images/banner.svg";
 import emailSvg from "../Assets/Icons/email.svg"

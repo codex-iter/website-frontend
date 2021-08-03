@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css"
 import Home from "./core/Home";
 import Members from "./core/Members";
-import Contact from "./Containers/Contact"
-import About from "./Containers/About"
-import Error from "./Containers/Error"
+import Contact from "./core/Contact"
+import About from "./core/About"
+import Error from "./core/Error"
 const Routes = () => {
   return (
     <div className="App">

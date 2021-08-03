@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Base from "../core/Base"
+import Base from "./Base"
 import Styles from "../Styles/Contact.module.css";
 import CustomSocialIcon from "../Components/SocialIcons"
 import CustomInput from "../Components/Input";
