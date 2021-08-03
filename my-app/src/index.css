@@ -1,3 +1,17 @@
+:root {
+  --clr-primary: #0D1026;
+  --clr-secondary: #56ccf2;
+
+  --clr-dark: #0C1B38;
+  --clr-pastel: #E0EEF7;
+  --clr-light: #f6f6f6;
+
+  --ff-primary: "Roboto",
+    sans-serif;
+  --ff-accent: "Playfair Display",
+    serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +24,249 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.split {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-primary);
+  /* align-items: center; */
+}
+
+.split2 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-primary);
+  align-items: center;
+}
+
+.heading {
+  text-align: left;
+  font-size: 1.87em;
+  line-height: 2em;
+  color: var(--clr-light);
+}
+
+.p {
+  max-width: 35rem;
+  text-align: left;
+  font-size: 3.5em;
+  letter-spacing: -1.78px;
+  color: var(--clr-light);
+  font-weight: bold;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+}
+
+.container1 {
+  margin-left: 2em;
+  padding: 1.5em;
+  width: min(90%, 70.5rem);
+}
+
+.display {
+  width: 16.125em;
+  height: 15.687em;
+  background-color: var(--clr-pastel);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 1.7em;
+}
+
+.display>* {
+  display: block;
+  position: relative;
+  /* left: 6rem; */
+  top: 3rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.display>img {
+  left: 6rem;
+}
+
+.btn-github {
+  position: relative;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 65px;
+  color: #000000;
+  width: 185.08px;
+  height: 63.44px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: var(--clr-secondary);
+  position: relative;
+
+}
+
+@media (min-width:40rem) {
+  .p {
+    font-size: 4.5em;
+  }
+
+  .split {
+    flex-direction: row;
+  }
+
+  .split>* {
+    flex-basis: 100%;
+  }
+
+  .split>*+* {
+    margin-left: 2em;
+  }
+
+  .split2 {
+    justify-content: space-around;
+    flex-direction: row;
+
+  }
+
+  .split2>*+* {
+    margin-left: 2em;
+  }
+}
+.icons-btn {
+  width: 2.63875em;
+  height: 2.63875em;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  margin-right: 0.5em;
+}
+
+.icons {
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+}
+
+.slider {
+  background-color: var(--clr-primary);
+  z-index: -1;
+  height: 43.2em;
+  /* position: relative; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  max-width: 12.38em;
+  height: 12.37em;
+  display: block;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+}
+
+.ba {
+  position: relative;
+  right: 3em;
+  float: right;
+  top: calc(53% - 70px/2 - 270px);
+}
+
+.container {
+  background-color: var(--clr-pastel);
+  padding: 3rem;
+  border: 1px solid black;
+  margin-top: 6rem;
+  width: 58em;
+  height: 30em;
+}
+
+/* contact form css */
+.contact-form {
+  background-color: var(--clr-dark);
+  height: 50.375em;
+  position: relative;
+}
+
+.form {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  max-width: 39.14em;
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form div {
+  margin-bottom: 2em;
+}
+.text {
+  padding: 2em;
+}
+.form h1 {
+  font-size: 80px;
+  line-height: 81px;
+  letter-spacing: -1.78px;
+  color: var(--clr-light);
+  font-weight: bold;
+}
+
+.form input[type="email"] {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  background-image: url(./images/emial.png);
+  background-color: var(--clr-primary);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  text-indent: 1em;
+  min-width: 15.6em;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--clr-light);
+  border-radius: 2em;
+  padding: 1em;
+  /* width: 100%; */
+}
+
+.form button {
+  width: 100%;
+  padding: 1em;
+  min-width: 15.6em;
+  border-radius: 2em;
+  font-size: 20px;
+  color: var(--clr-primary);
+  background-color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div {
+  margin-top: 1em;
+  text-align: center;
+  /* border: 1px solid white; */
+}
+
+footer div p {
+  text-align: center;
+  font-size: 2em;
+  /* margin-top: 4em; */
+  padding:1em;
+}
+
+@media(min-width: 40rem) {
+  footer {
+    flex-direction: row;
+  }
 }
