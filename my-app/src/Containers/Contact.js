@@ -1,4 +1,5 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import Base from "../core/Base"
 import Styles from "../Styles/Contact.module.css";
 import CustomSocialIcon from "../Components/SocialIcons"
 import CustomInput from "../Components/Input";
@@ -18,6 +19,7 @@ const Contact = () => {
         
     }
     return (
+        <Base>
         <div className={ Styles.contact_outer }>
             <div className={ Styles.contact_inner }>
                 <div className={ Styles.contact_inner_left }>
@@ -67,7 +69,7 @@ const Contact = () => {
                    </div>
                 </div>
             </div>
-       </div>
+       </div></Base>
    ) 
 }
 

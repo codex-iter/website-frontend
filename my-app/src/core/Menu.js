@@ -41,10 +41,10 @@ const Menu = ({ history, children }) => {
             <Link style={currentTab(history, "/")} className='nav-link' to='/'>
               Events
             </Link>
-            <Link style={currentTab(history, "/")} className='nav-link' to='/'>
+            <Link style={currentTab(history, "/about")} className='nav-link' to='/about'>
               About us
             </Link>
-            <Link style={currentTab(history, "/")} className='nav-link' to='/'>
+            <Link style={currentTab(history, "/contact")} className='nav-link' to='/contact'>
               Contact us
             </Link>
           </Nav>

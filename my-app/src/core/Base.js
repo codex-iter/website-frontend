@@ -4,11 +4,12 @@ import Logo from "../images/codex logo 2.png";
 import ContactInfo from "./ContactInfo";
 
 const Base = ({ children }) => {
+
   return (
     <div>
-      <Menu></Menu>
+      <Menu/>
       {children}
-      <footer>
+      {["/contact","/about"].includes(window.location.pathname)?null:<footer>
         <div>
           <img style={{ width: "243px", height: "243px" }} src={Logo} alt='' />
         </div>
@@ -22,11 +23,11 @@ const Base = ({ children }) => {
           <h2 style={{ color: "#f6f6f6", padding: "5px" }}>FOLLOW US</h2>
           <ContactInfo>
             <button className='icons-btn'>
-              <img src='https://img.icons8.com/material-rounded/24/000000/github.png' />
+              <img src='https://img.icons8.com/material-rounded/24/000000/github.png' alt="" />
             </button>
           </ContactInfo>
         </div>
-      </footer>
+      </footer>}
     </div>
   );
 };

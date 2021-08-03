@@ -1,4 +1,5 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import Base from "../core/Base"
 import Styles from "../Styles/About.module.css";
 import banner from "../Assets/Images/banner.svg";
 import emailSvg from "../Assets/Icons/email.svg"
@@ -10,6 +11,7 @@ const About = () => {
         
     }
     return (
+        <Base>
         <div className={ Styles.about_outer }>
             <div className={ Styles.about_banner }>
                 <div><img src={ banner } alt=""/></div>
@@ -37,7 +39,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div></Base>
     )
 }
 

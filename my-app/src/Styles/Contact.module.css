@@ -5,9 +5,9 @@
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: auto;
+    background: #0D1026;
 }
 .contact_inner{
-    margin-top: 120px;
     height: -webkit-fill-available;
     display: flex;
     flex-direction: row;
