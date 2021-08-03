@@ -1,0 +1,14 @@
+.header {
+    background: #0D1026;
+    /* margin-inline: auto; */
+    }
+
+    .justify-content-end {
+        position: relative;
+        margin-right: 10em;
+    }
+
+    .nav-brand {
+        position: relative;
+        left: 2em;
+}
