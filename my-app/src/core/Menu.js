@@ -20,7 +20,7 @@ const Menu = ({ history, children }) => {
       <Navbar className='header' collapseOnSelect expand='lg' variant='dark'>
         {/* <Container> */}
         <Navbar.Brand className='nav-brand justify-content-start' href='#home'>
-          <img style={{ width: "243px", height: "243px" }} src={Logo} alt='' />
+          <img style={{ width: "243px" }} src={Logo} alt='' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse
@@ -38,7 +38,7 @@ const Menu = ({ history, children }) => {
             >
               Members
             </Link>
-            <Link style={currentTab(history, "/")} className='nav-link' to='/'>
+            <Link style={currentTab(history, "/events")} className='nav-link' to='/events'>
               Events
             </Link>
             <Link style={currentTab(history, "/about")} className='nav-link' to='/about'>

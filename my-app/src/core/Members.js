@@ -4,7 +4,7 @@ const Members = () => {
   return (
     <div>
       <Base></Base>
-      <h1>Membres</h1>
+      <h1>Members</h1>
     </div>
   );
 };
