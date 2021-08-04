@@ -1,21 +1,19 @@
 :root {
-  --clr-primary: #0D1026;
+  --clr-primary: #0d1026;
   --clr-secondary: #56ccf2;
 
-  --clr-dark: #0C1B38;
-  --clr-pastel: #E0EEF7;
+  --clr-dark: #0c1b38;
+  --clr-pastel: #e0eef7;
   --clr-light: #f6f6f6;
 
-  --ff-primary: "Roboto",
-    sans-serif;
-  --ff-accent: "Playfair Display",
-    serif;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-accent: "Playfair Display", serif;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,7 +21,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .split {
@@ -59,12 +57,13 @@ code {
 .banner {
   display: block;
   width: 100%;
+  background-color: transparent;
 }
 
 .container1 {
   margin-left: 2em;
   padding: 1.5em;
-  width: min(90%, 70.5rem);
+  width: min(90%, 80rem);
 }
 
 .display {
@@ -76,7 +75,7 @@ code {
   border-radius: 1.7em;
 }
 
-.display>* {
+.display > * {
   display: block;
   position: relative;
   /* left: 6rem; */
@@ -85,7 +84,7 @@ code {
   font-weight: 800;
 }
 
-.display>img {
+.display > img {
   left: 6rem;
 }
 
@@ -102,10 +101,9 @@ code {
   border: none;
   background-color: var(--clr-secondary);
   position: relative;
-
 }
 
-@media (min-width:40rem) {
+@media (min-width: 40rem) {
   .p {
     font-size: 4.5em;
   }
@@ -114,21 +112,20 @@ code {
     flex-direction: row;
   }
 
-  .split>* {
+  .split > * {
     flex-basis: 100%;
   }
 
-  .split>*+* {
+  .split > * + * {
     margin-left: 2em;
   }
 
   .split2 {
     justify-content: space-around;
     flex-direction: row;
-
   }
 
-  .split2>*+* {
+  .split2 > * + * {
     margin-left: 2em;
   }
 }
@@ -144,7 +141,6 @@ code {
 .icons {
   margin-top: 2em;
   margin-bottom: 2em;
-
 }
 
 .slider {
@@ -172,7 +168,7 @@ code {
   position: relative;
   right: 3em;
   float: right;
-  top: calc(53% - 70px/2 - 270px);
+  top: calc(53% - 70px / 2 - 270px);
 }
 
 .container {
@@ -263,10 +259,10 @@ footer div p {
   text-align: center;
   font-size: 2em;
   /* margin-top: 4em; */
-  padding:1em;
+  padding: 1em;
 }
 
-@media(min-width: 40rem) {
+@media (min-width: 40rem) {
   footer {
     flex-direction: row;
   }

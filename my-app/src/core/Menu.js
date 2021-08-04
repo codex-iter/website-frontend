@@ -17,34 +17,67 @@ const Menu = ({ history, children }) => {
   return (
     <div>
       {children}
-      <Navbar className='header' collapseOnSelect expand='lg' variant='dark'>
+      <Navbar className="header" collapseOnSelect expand="lg" variant="dark">
         {/* <Container> */}
-        <Navbar.Brand className='nav-brand justify-content-start' href='#home'>
-          <img style={{ width: "243px", height: "243px" }} src={Logo} alt='' />
+        <Navbar.Brand className="nav-brand justify-content-start" href="#home">
+          <img style={{ width: "243px", height: "243px" }} src={Logo} alt="" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
-          className='justify-content-end'
-          id='responsive-navbar-nav'
+          className="justify-content-end"
+          id="responsive-navbar-nav"
         >
           <Nav>
-            <Link style={currentTab(history, "/")} className='nav-link' to='/'>
+            <Link style={currentTab(history, "/")} className="nav-link" to="/">
               Home
             </Link>
-            <Link
-              style={currentTab(history, "/members")}
-              className='nav-link'
-              to='/members'
-            >
-              Members
-            </Link>
-            <Link style={currentTab(history, "/")} className='nav-link' to='/'>
+            <div className="dropdown nav-link">
+              <a
+                // class="btn btn-secondary dropdown-toggle"
+                className="custom-dropdown"
+                // style={{ color: "white", padding: "2em", textAlign: "center" }}
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Community
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <Link
+                  // style={currentTab(history, "/members")}
+                  className=" dropdown-item"
+                  to="/members"
+                >
+                  Members
+                </Link>
+                <Link
+                  // style={currentTab(history, "/members")}
+                  className=" dropdown-item"
+                  to="/alumni"
+                >
+                  Alumnis
+                </Link>
+              </ul>
+            </div>
+
+            <Link style={currentTab(history, "/")} className="nav-link" to="/">
               Events
             </Link>
-            <Link style={currentTab(history, "/about")} className='nav-link' to='/about'>
+            <Link
+              style={currentTab(history, "/about")}
+              className="nav-link"
+              to="/about"
+            >
               About us
             </Link>
-            <Link style={currentTab(history, "/contact")} className='nav-link' to='/contact'>
+            <Link
+              style={currentTab(history, "/contact")}
+              className="nav-link"
+              to="/contact"
+            >
               Contact us
             </Link>
           </Nav>
