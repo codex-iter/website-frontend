@@ -7,9 +7,9 @@ const Base = ({ children }) => {
 
   return (
     <div>
-      <Menu/>
+      <Menu />
       {children}
-      {["/contact","/about"].includes(window.location.pathname)?null:<footer>
+      {["/contact", "/about"].includes(window.location.pathname) ? null : <footer>
         <div>
           <img style={{ width: "243px", height: "243px" }} src={Logo} alt='' />
         </div>
