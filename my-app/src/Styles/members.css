@@ -1,0 +1,137 @@
+.split1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 40em) {
+  .split1 {
+    flex-direction: row;
+  }
+  .splitx {
+    align-items: center;
+    padding: 10%;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+  }
+  .split2-x {
+    padding: 5em;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(300px, 1fr));
+  }
+}
+
+.container1-x {
+  width: min(70%, 60em);
+  margin-inline: auto;
+  text-align: center;
+
+  /* padding: 5em; */
+  color: white;
+}
+.container1-x h1 {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+
+  /* font-size: 60px; */
+  /* width: min(70%, 60em); */
+  /* line-height: 70px; */
+}
+.container1-x h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+
+  text-align: center;
+  /* font-size: 36px; */
+  /* width: min(70%, 60em); */
+  /* line-height: 70px; */
+}
+
+.container-x h2,
+.class1 {
+  width: min(70%, 60em);
+  margin-inline: auto;
+  text-align: center;
+
+  padding: 3em;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 70px;
+}
+
+.cardx {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* width: 238px;
+  height: 344.22px; */
+  /* left: 260px; */
+  align-items: center;
+
+  padding: 36px;
+}
+
+.name {
+  position: center;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 44px;
+  /* identical to box height, or 147% */
+
+  text-align: center;
+  letter-spacing: -0.64px;
+
+  color: #f6f6f6;
+}
+
+.title {
+  position: center;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 38px;
+  /* identical to box height, or 158% */
+
+  text-align: center;
+  letter-spacing: -0.47px;
+
+  color: #f6f6f6;
+}
+
+.a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.links {
+  display: flex;
+  width: 144.22px;
+  height: 42.22px;
+  left: 307px;
+  top: 617px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.links a {
+  border: 2px solid #f6f6f6;
+  box-sizing: border-box;
+  border-radius: 200px;
+  background-color: #fafafa;
+}
+
+.class-alumni h2 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 70px;
+}
