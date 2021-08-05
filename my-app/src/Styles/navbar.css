@@ -1,6 +1,8 @@
 .header {
   background: #0d1026;
   /* margin-inline: auto; */
+  padding: 0;
+  margin:0;
 }
 
 .justify-content-end {
@@ -22,4 +24,5 @@
 
 .custom-dropdown:hover {
   color: #56ccf2;
+  text-decoration: none;
 }

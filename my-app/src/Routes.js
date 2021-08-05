@@ -7,13 +7,15 @@ import Event from "./core/Event";
 import Contact from "./core/Contact";
 import About from "./core/About";
 import Error from "./core/Error";
+import Alumni from "./core/Alumni";
 const Routes = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/members' exact component={Members} />
+          <Route path='/alumni' exact component={Alumni} />
           <Route path='/events' exact component={Event} />
           <Route path='/contact' exact component={Contact} />
           <Route path='/about' exact component={About} />
