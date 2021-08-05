@@ -1,12 +1,12 @@
 /*event css*/
-.App {
+/* .App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -44,14 +44,14 @@
 *::after {
     box-sizing: border-box;
 }
-
+/* 
 body {
     font-family:'Inter',sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.3125rem;
     line-height: 1.6;
-}
+} */
 
 body,
 h1,
