@@ -8,7 +8,7 @@ import insta from "../Assets/Icons/insta.svg"
 import facebook from "../Assets/Icons/facebook.svg"
 import twitter from "../Assets/Icons/twitter.svg"
 import linkedIn from "../Assets/Icons/linkedIn.svg"
-import user from "../Assets/Icons/user.svg";
+import userSvg from "../Assets/Icons/user.svg";
 import emailSvg from "../Assets/Icons/email.svg";
 const Contact = () => {
     const [name, setName] = useState("");
@@ -42,7 +42,7 @@ const Contact = () => {
                         placeholder="Name"
                         path="contact"
                         handleChange={ (e) => setName(e.target.value) }
-                        svg={ user } />
+                        svg={ userSvg } />
                     </div>
                     <div className={Styles.input_name}>
                          <CustomInput
