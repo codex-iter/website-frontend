@@ -11,9 +11,6 @@ const Testimonial = () => {
           alt=''
         />
       </div>
-      <div>
-        <img className='ba' src={badge} alt='' />
-      </div>
       <div className='content'>
         <h1>David Sylvian</h1>
         <h2>CEO, Manafon</h2>
@@ -22,6 +19,9 @@ const Testimonial = () => {
           sed aliquam ipsa ducimus vitae assumenda possimus. Maxime, deleniti
           sed autem facere perferendis nihil quae.
         </p>
+      </div>
+      <div>
+        <img className='ba' src={badge} alt='' />
       </div>
     </div>
   );
