@@ -87,10 +87,6 @@ section {
     flex-direction: column;
 }
 @media(min-width:40em) {
-    header,
-    section {
-        padding: 7rem 0;
-    }
     .split-y{
         flex-direction:row;
     }

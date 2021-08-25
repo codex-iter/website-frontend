@@ -38,11 +38,7 @@ const Menu = ({ history, children }) => {
       <Navbar className='header' collapseOnSelect expand='lg' variant='dark'>
         {/* <Container> */}
         <Navbar.Brand className='nav-brand justify-content-start' href='#home'>
-          <img
-            style={{ width: "220px", height: "12.25rem" }}
-            src={Logo}
-            alt=''
-          />
+          <img style={{ width: "150px" }} src={Logo} alt='' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse

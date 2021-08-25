@@ -28,7 +28,7 @@ code {
   display: flex;
   flex-direction: column;
   background-color: var(--clr-primary);
-  /* align-items: center; */
+
 }
 
 .split2 {
@@ -61,8 +61,7 @@ code {
 }
 
 .container1 {
-  margin-left: 2em;
-  padding: 1.5em;
+  padding: 0px 2em;
   width: min(90%, 80rem);
 }
 
@@ -110,10 +109,11 @@ code {
 
   .split {
     flex-direction: row;
+     padding: 3em;
   }
 
   .split > * {
-    flex-basis: 100%;
+    flex-basis: 50%;
   }
 
   .split > * + * {
@@ -136,23 +136,23 @@ code {
   outline: none;
   border: none;
   margin-right: 0.5em;
+  background-color: #0c1b38;
+  border:2px solid white;
 }
 
 .icons {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-
+.icons-btn img{
+  width: 90%;
+  height: 90%;
+}
 .slider {
   background-color: var(--clr-primary);
   z-index: -1;
   height: 43.2em;
   /* position: relative; */
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
 }
 
 .avatar {
@@ -165,21 +165,41 @@ code {
 }
 
 .ba {
-  position: relative;
-  right: 3em;
-  float: right;
-  top: calc(53% - 70px / 2 - 270px);
+
+  position: absolute;
+  top:-40px;
+  left:70%;
+  z-index: 1;
 }
 
 .container {
   background-color: var(--clr-pastel);
-  padding: 3rem;
   border: 1px solid black;
-  margin-top: 6rem;
+  margin-top: 3rem;
   width: 58em;
   height: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  position: relative;
 }
+@media (min-width: 70em) {
+  .container {
+  flex-direction: row;
+  align-items: center;
+}
+.container > *{
+  margin: 0px 4px;
+}
+.ba {
 
+  position: absolute;
+  top:-20px;
+  left:90%;
+  z-index: 1;
+}
+}
 /* contact form css */
 .contact-form {
   background-color: var(--clr-dark);
@@ -192,13 +212,15 @@ code {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  max-width: 39.14em;
+  max-width: 50em;
   height: 20rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
+  
 }
 
 .form div {
