@@ -14,20 +14,17 @@ const Base = ({ children }) => {
             <img
               style={{ width: "243px", height: "243px" }}
               src={Logo}
-              alt=''
+              alt=""
             />
           </div>
           <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry.
-            </p>
+            <p>A community of coders learning and exploring together</p>
           </div>
-          <div>
+          <div className="footer-end">
             <h2 style={{ color: "#f6f6f6", padding: "5px" }}>FOLLOW US</h2>
             <ContactInfo>
-              <button className='icons-btn'>
-                <img src={github} alt='' />
+              <button className="icons-btn">
+                <img src={github} alt="" />
               </button>
             </ContactInfo>
           </div>

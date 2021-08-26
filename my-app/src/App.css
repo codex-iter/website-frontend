@@ -1,12 +1,12 @@
-.App{
+.App {
   width: 100vw;
   height: 100vh;
-  background: #0D1026;
+  background: #0d1026;
   overflow-y: auto;
 }
 footer {
   position: relative;
   bottom: 0;
   border: 1px solid black;
-  background: #0D1026;
+  background: #0d1026;
 }
