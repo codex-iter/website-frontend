@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Base from "./Base";
 import UserCard from "./userCard";
 import "../Styles/members.css";
 const Alumni = () => {
+  const [alumnis, setAlumnis] = useState([]);
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    const response = await fetch(
+      "http://codexweb-backend.herokuapp.com/api/getAlumni"
+    );
+    const alumnis = await response.json();
+    console.log(alumnis, "json");
+    setAlumnis(alumnis);
+  };
   return (
     <div>
       <Base>
@@ -10,18 +23,16 @@ const Alumni = () => {
           <div className="class-alumni">
             <h2>Our Alumni</h2>
             <div className="splitx">
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
-              <UserCard />
+              {alumnis.map((alumni) => (
+                <UserCard
+                  img={alumni.githubDP}
+                  name={alumni.name}
+                  skill={alumni.skill}
+                  twitterLink={alumni.twitter}
+                  linkedinLink={alumni.linkedin}
+                  githubLink={alumni.github}
+                />
+              ))}
             </div>
           </div>
         </section>
