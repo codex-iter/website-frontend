@@ -55,7 +55,8 @@ code {
 
 .banner {
   display: block;
-  width: 100%;
+  width: 35vw;
+  height: 47vh;
   background-color: transparent;
 }
 

@@ -84,7 +84,7 @@ const Members = () => {
             </div>
           </section>
 
-          <section>
+          <section className="member-section">
             <h2 className="class1">Members</h2>
             <div className="split2-x">
               {memb.map((member) => (
