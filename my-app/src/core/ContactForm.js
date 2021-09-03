@@ -5,7 +5,7 @@ const ContactForm = () => {
     <div>
       <form className='form'>
         <div className='text'>
-          <h1>Join our monthly news letter</h1>
+          <h1>Join our monthly newsletter</h1>
         </div>
         <div>
           <input type='email' placeholder='email' />

@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Base>
-        <div className='section'>
+        <div className='container'>
           <section className='split'>
             <div>
               <div className='container1'>
@@ -21,60 +21,68 @@ const Home = () => {
                 </p>
                 <ContactInfo></ContactInfo>
                 <button className='btn-github'>
-                  <div className='btn-container' style={{ width: "100%" }}>
-                    <img
-                      style={{
-                        width: "30px",
-                        height: "30px",
-                        marginLeft: "0",
-                        display: "inline-block",
-                      }}
-                      src='https://img.icons8.com/fluency-systems-filled/48/000000/github.png'
-                    />
-                    Visit Github
+                  <div className='btn-container'>
+                    <div>
+                      <img
+                        style={{
+                          width: "30px",
+                          height: "30px",
+                          marginLeft: "0",
+                          marginRight: "10px",
+                          padding: "0px",
+                          display: "inline-block",
+                        }}
+                        src='https://img.icons8.com/fluency-systems-filled/48/000000/github.png'
+                      />
+                    </div>
+                    <div>
+                      <span style={{ fontSize: "1.2em" }}> Visit Github</span>
+                    </div>
                   </div>
                 </button>
               </div>
             </div>
 
             <div>
-              {/* <div className='container1'> */}
               <img
                 className='banner'
                 style={{ width: "100%", height: "100%" }}
-                src={gif}
+                src={banner}
                 alt=''
               />
             </div>
-            {/* </div> */}
           </section>
         </div>
-        <section
-          className='split2'
-          style={{ backgroundColor: "#0C1E3C", height: "43.2em" }}
-        >
-          <div className='display'>
-            <img src='https://img.icons8.com/fluency-systems-regular/48/000000/guest-male.png' />
-            <h1>100+</h1>
-            <h2>Members</h2>
-          </div>
-          <div className='display'>
-            <img src='https://img.icons8.com/ios/50/000000/repository.png' />
-            <h1>30+</h1>
-            <h2>Projects</h2>
-          </div>
-          <div className='display'>
-            <img src='https://img.icons8.com/ios-filled/50/000000/merge-git.png' />
-            <h1>1K+</h1>
-            <h2>Commits</h2>
-          </div>
-        </section>
-
-        <section className='slider'>
-          <div className='container-testimonial'>
-            <Slider></Slider>
+        <section style={{ backgroundColor: "#0c1b38" }}>
+          <div className='container container-spe'>
+            {" "}
+            <section className='split2'>
+              <div className='display'>
+                <img src='https://img.icons8.com/fluency-systems-regular/48/000000/guest-male.png' />
+                <h1>100+</h1>
+                <h2>Members</h2>
+              </div>
+              <div className='display'>
+                <img src='https://img.icons8.com/ios/50/000000/repository.png' />
+                <h1>30+</h1>
+                <h2>Projects</h2>
+              </div>
+              <div className='display'>
+                <img src='https://img.icons8.com/ios-filled/50/000000/merge-git.png' />
+                <h1>1K+</h1>
+                <h2>Commits</h2>
+              </div>
+            </section>
           </div>
         </section>
+        <div className='container  .container-spe'>
+          {" "}
+          <section className='slider'>
+            <div className='container-testimonial-2'>
+              <Slider></Slider>
+            </div>
+          </section>
+        </div>
         <section className='contact-form'>
           <ContactForm></ContactForm>
         </section>
