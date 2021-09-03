@@ -8,6 +8,12 @@
 @media (min-width: 40em) {
   .split1-x {
     flex-direction: row;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .splitx {
     /* width: 80vw; */
@@ -43,7 +49,7 @@ section {
   justify-content: center;
 } */
 .container1-x {
-  width: min(70%, 60em);
+  /* width: min(70%, 60em); */
   margin-inline: auto;
   text-align: center;
   /* border: 1px solid #f6f6f6; */
@@ -71,7 +77,7 @@ section {
 
 .container-x h2,
 .class1 {
-  width: min(70%, 60em);
+  /* width: min(70%, 60em); */
   margin-inline: auto;
   text-align: center;
   color: white;
@@ -79,7 +85,7 @@ section {
   font-size: 36px;
   line-height: 70px;
   margin-bottom: 0em;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 .cardx {
