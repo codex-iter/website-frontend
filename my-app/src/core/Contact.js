@@ -10,6 +10,8 @@ import twitter from "../Assets/Icons/twitter.svg"
 import linkedIn from "../Assets/Icons/linkedIn.svg"
 import userSvg from "../Assets/Icons/user.svg";
 import emailSvg from "../Assets/Icons/email.svg";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -17,6 +19,34 @@ const Contact = () => {
 
     const handleSend = () => {
         
+        fetch("http://codexweb-backend.herokuapp.com/api/addMessage", {
+            method: "POST",
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message:message
+            }),
+             headers: {
+        "Content-type": "application/json; charset=UTF-8"
+          }
+        }).then((res) => {
+            if (res.status === 200) {
+                 Toastify({
+                    text: "Message sent successfully !!",
+                    duration: 3000,
+                    backgroundColor: "#E0EEF7",
+                    className: Styles.toast,
+                    stopOnFocus: true,
+                    position:"right"
+                }).showToast();
+                setName("");
+                setEmail("");
+                setMessage("");
+            }
+        }).catch((err) => {
+            console.log(err)
+        })
+       
     }
     return (
         <Base>

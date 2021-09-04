@@ -8,9 +8,12 @@
 }
 .about_banner{
     width: 100%;
+    height: 500px;
 }
 .about_banner img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .about_content{
     width: 100%;
@@ -30,7 +33,8 @@
 }
 .content_heading{
 font-style: normal;
-font-weight: 600;
+font-family:'Inter',sans-serif;
+font-weight: bold;
 font-size: 40px;
 line-height: 48px;
 letter-spacing: -0.89px;
@@ -42,7 +46,8 @@ margin-left: 82px;
 margin-top: 26px;
 width: 570px;
 font-style: normal;
-font-weight: normal;
+font-weight: 400;
+font-family:'Inter',sans-serif;
 font-size: 24px;
 line-height: 38px;
 letter-spacing: -0.47px;
@@ -58,6 +63,7 @@ color: #F8F8F8;
 .newsletter_heading{
 font-style: normal;
 font-weight: 600;
+font-family:'Inter',sans-serif;
 font-size: 40px;
 line-height: 48px;
 text-align: right;
