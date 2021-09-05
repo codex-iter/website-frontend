@@ -144,9 +144,11 @@ background: #0C1B38;
 	color:white;
 }
 .slick-next {
-    right: 0;
+    right: 0px;
+    visibility: hidden;
 }
 .slick-prev {
     /* left: -25px; */
     left: 0;
+    visibility: hidden;
 }

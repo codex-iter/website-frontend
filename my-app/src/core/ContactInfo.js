@@ -9,21 +9,21 @@ const ContactInfo = ({ children }) => {
   return (
     <div>
       <div className='icons'>
-        <button className='icons-btn'>
+        <a className='icons-btn' href='https://www.instagram.com/codexiter/'>
           <img src={insta} />
-        </button>
-        <button className='icons-btn'>
+        </a>
+        <a className='icons-btn'>
           <img src={yt} />
-        </button>
-        <button className='icons-btn'>
+        </a>
+        <a className='icons-btn'>
           <img src={linkedin} />
-        </button>
-        <button className='icons-btn'>
+        </a>
+        <a className='icons-btn'>
           <img src={fb} alt='' />
-        </button>
-        <button className='icons-btn'>
+        </a>
+        <a className='icons-btn'>
           <img src={twitter} />
-        </button>
+        </a>
         {children}
       </div>
     </div>

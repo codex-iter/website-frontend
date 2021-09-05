@@ -3,6 +3,7 @@ import "../Styles/Event.css";
 import Base from "./Base";
 import EventData from "./events/EventData";
 import EventData2 from "./events/EventData2";
+import Spinner from "./Spinner";
 function Event() {
   const [state, setState] = useState({
     eventData: [],
@@ -26,7 +27,11 @@ function Event() {
     getEventsData();
   }, []);
   if (state.loading) {
-    return <div>loading....</div>;
+    return (
+      <div>
+        <Spinner />
+      </div>
+    );
   }
   var count = 0;
   return (
