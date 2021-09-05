@@ -143,14 +143,14 @@ code {
   }
 }
 .icons-btn {
-  width: 2.63875em;
-  height: 2.63875em;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   outline: none;
   border: none;
   margin-right: 0.5em;
   background-color: #0c1b38;
-  border: 2px solid white;
+  
 }
 
 .icons {
@@ -159,11 +159,15 @@ code {
   min-width:300px;
 }
 .icons-btn img {
-  width: 90%;
-  height: 90%;
+   width: 38px;
+  height: 38px;
+  margin:2px;
+    /* border: 2px solid white; */
+  border-radius: 60%;
 }
 
-.icons-btn:hover {
+.icons-btn img:hover {
+  cursor: pointer;
   transform: scale(1.3);
 }
 .slider {

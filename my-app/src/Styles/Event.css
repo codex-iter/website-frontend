@@ -86,12 +86,15 @@ section {
     display: flex;
     flex-direction: column;
 }
+.split-y > *{
+  margin: 20px 0px;
+}
 @media(min-width:40em) {
     .split-y{
         flex-direction:row;
     }
     .split-y > *{
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
     .split-y > * + *{
         margin-left: 2em;
@@ -121,6 +124,7 @@ background: #0C1B38;
 .card_content {
 	grid-area: text;
 	width: 80%;
+
 	place-self: center;
 	text-align: left;
 
@@ -132,10 +136,19 @@ background: #0C1B38;
 .heading1
 {
   text-align: center;
-  padding:5rem;
+  padding:3rem;
   margin-bottom: 1rem;
 }
 .organizers
 {
 	color:white;
+}
+.slick-next {
+    right: 0px;
+    visibility: hidden;
+}
+.slick-prev {
+    /* left: -25px; */
+    left: 0;
+    visibility: hidden;
 }
