@@ -39,7 +39,7 @@ const Menu = ({ history, children }) => {
         <Container>
           <Navbar.Brand
             className='nav-brand justify-content-start'
-            href='#home'
+            href='/'
           >
             <img style={{ width: "150px" }} src={newLogo} alt='' />
           </Navbar.Brand>

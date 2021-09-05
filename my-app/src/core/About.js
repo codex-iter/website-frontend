@@ -3,7 +3,7 @@ import React
   from "react";
 import Base from "./Base"
 import Styles from "../Styles/About.module.css";
-import banner from "../Assets/Images/about.jpg";
+import banner from "../Assets/Images/about.png";
 // import emailSvg from "../Assets/Icons/email.svg"
 // import CustomInput from "../Components/Input";
 import CustonButton from "../Components/Buttons"
