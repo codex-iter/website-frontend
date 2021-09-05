@@ -3,7 +3,7 @@ import EventSilder from "../EventSilder";
 
 const EventData = (props) => {
   console.log("ed1", props);
-  const { description, organizers, images } = props;
+  const { description, organizers, images, children } = props;
 
   return (
     <div>
@@ -11,7 +11,7 @@ const EventData = (props) => {
         <div className='container-y'>
           <div className='split-y'>
             <div className='card_content'>
-              <h1>Event 1</h1>
+              {children}
               <p>
                 {description}
                 <p>

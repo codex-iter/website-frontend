@@ -48,22 +48,32 @@ function Event() {
             description={state.eventData[0].description}
             organizers={state.eventData[0].organizers}
             images={state.eventData[0].images}
-          ></EventData>
+          >
+            <h1>Event 1</h1>
+          </EventData>
           <EventData2
             description={state.eventData[0].description}
             organizers={state.eventData[0].organizers}
             images={state.eventData[0].images}
-          ></EventData2>
+          >
+            {" "}
+            <h1>Event 2</h1>
+          </EventData2>
           <EventData
             description={state.eventData[0].description}
             organizers={state.eventData[0].organizers}
             images={state.eventData[0].images}
-          ></EventData>
+          >
+            <h1>Event 3</h1>
+          </EventData>
           <EventData2
             description={state.eventData[0].description}
             organizers={state.eventData[0].organizers}
             images={state.eventData[0].images}
-          ></EventData2>
+          >
+            {" "}
+            <h1>Event 4</h1>
+          </EventData2>
         </>
       )}
     </Base>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import EventSilder from "../EventSilder";
 const EventData2 = (props) => {
   console.log("event 2", props);
-  const { description, organizers, images } = props;
+  const { description, organizers, images, children } = props;
   return (
     <section class='bgeevent1'>
       <div class='container-y'>
@@ -11,7 +11,7 @@ const EventData2 = (props) => {
             <EventSilder images={images}></EventSilder>
           </div>
           <div className='card_content'>
-            <h1>Event 2</h1>
+            {children}
             <p>
               {description}
               <p>
