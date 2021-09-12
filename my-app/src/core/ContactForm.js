@@ -8,10 +8,7 @@ const ContactForm = () => {
           <h1>Join our monthly newsletter</h1>
         </div>
         <div>
-          <input type='email' placeholder='email' />
-        </div>
-        <div>
-          <button className='btn btn-primary'>Subscribe</button>
+          <button className='btn btn-primary' onClick={event =>  window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdOp_wsPsjwFvxhSRECAxBsUGeL2s4cjJ1SghNLgNPg7f8bHQ/viewform'}>Subscribe</button>
         </div>
       </form>
     </div>

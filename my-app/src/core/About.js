@@ -6,7 +6,7 @@ import Styles from "../Styles/About.module.css";
 import banner from "../Assets/Images/about.png";
 // import emailSvg from "../Assets/Icons/email.svg"
 // import CustomInput from "../Components/Input";
-import CustonButton from "../Components/Buttons"
+import CustomButton from "../Components/Buttons"
 const About = () => {
     // const [email, setEmail] = useState("");
     const handleClick = () => {
@@ -45,7 +45,7 @@ const About = () => {
                 />
               </div> */}
               <div className={Styles.button_margin}>
-                <CustonButton
+                <CustomButton
                   text='Subscribe'
                   page=''
                   handleClick={handleClick}

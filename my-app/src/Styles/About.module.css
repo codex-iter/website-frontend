@@ -34,8 +34,7 @@
 .content_heading{
 font-style: normal;
 font-family:'Inter',sans-serif;
-font-weight: bold;
-font-size: 40px;
+font-size: 35px;
 line-height: 48px;
 letter-spacing: -0.89px;
 color: #F7F5F5;
@@ -44,11 +43,9 @@ margin-left: 82px;
 .content_para{
 margin-left: 82px;
 margin-top: 26px;
-width: 570px;
-font-style: normal;
-font-weight: 400;
+width: 500px;
 font-family:'Inter',sans-serif;
-font-size: 24px;
+font-size: 20px;
 line-height: 38px;
 letter-spacing: -0.47px;
 color: #F8F8F8;
@@ -62,9 +59,9 @@ color: #F8F8F8;
 }
 .newsletter_heading{
 font-style: normal;
-font-weight: 600;
+font-weight: 500;
 font-family:'Inter',sans-serif;
-font-size: 40px;
+font-size: 30px;
 line-height: 48px;
 text-align: right;
 letter-spacing: -0.89px;

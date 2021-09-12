@@ -8,6 +8,7 @@ import insta from "../Assets/Icons/insta.svg"
 import facebook from "../Assets/Icons/facebook.svg"
 import twitter from "../Assets/Icons/twitter.svg"
 import linkedIn from "../Assets/Icons/linkedIn.svg"
+import YT from "../Assets/Icons/YoutubeLogo.svg";
 import userSvg from "../Assets/Icons/user.svg";
 import emailSvg from "../Assets/Icons/email.svg";
 import Toastify from 'toastify-js'
@@ -58,9 +59,9 @@ const Contact = () => {
                     <div className={ Styles.icon_section }>
                          <CustomSocialIcon svg={ insta } href="https://www.instagram.com/codexiter/"/>
                          <CustomSocialIcon svg={ facebook } href="https://www.facebook.com/codexiter" />
-                         <CustomSocialIcon svg={ twitter } />
+                         {/* <CustomSocialIcon svg={ twitter } /> */}
                         <CustomSocialIcon svg={ linkedIn } href="https://www.linkedin.com/company/codex-iter/" />
-        
+                        <CustomSocialIcon svg={ YT } href="https://www.youtube.com/channel/UCu1S3gm2ODknxDlkpPX2RrA" />
                     </div>
                 </div>
                 <div className={ Styles.contact_inner_right }>

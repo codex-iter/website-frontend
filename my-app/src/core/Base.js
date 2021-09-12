@@ -17,7 +17,7 @@ const Base = ({ children }) => {
               <img style={{ width: "150px" }} src={newLogo} alt='' />
             </div>
             <div>
-              <p>A community of coders learning and exploring together</p>
+              <p style={{fontSize:"130%"}}>A community of coders learning and exploring together</p>
             </div>
             <div className='footer-end'>
               <h2 style={{ color: "#f6f6f6", padding: "5px" }}>FOLLOW US</h2>

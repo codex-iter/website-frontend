@@ -20,7 +20,7 @@ const Home = () => {
                   We Explore.
                 </p>
                 <ContactInfo></ContactInfo>
-                <button className='btn-github'>
+                <button className='btn-github' onClick={event =>  window.location.href='https://github.com/codex-iter'}>
                   <div className='btn-container'>
                     <div>
                       <img
