@@ -46,7 +46,7 @@ const Home = () => {
             <div>
               <img
                 className='banner'
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "110%",height:"85%"}}
                 src={banner}
                 alt=''
               />

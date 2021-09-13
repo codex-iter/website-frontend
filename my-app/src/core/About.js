@@ -13,7 +13,8 @@ const About = () => {
         window.open("https://docs.google.com/forms/d/e/1FAIpQLSdOp_wsPsjwFvxhSRECAxBsUGeL2s4cjJ1SghNLgNPg7f8bHQ/viewform")
     }
     return (
-      <Base>
+      <div>
+       <Base>
         <div className={Styles.about_outer}>
           <div className={Styles.about_banner}>
       
@@ -54,7 +55,8 @@ const About = () => {
             </div>
           </div>
         </div>
-      </Base>
+        </Base>
+      </div>
     );
 }
 

@@ -41,7 +41,7 @@ const Menu = ({ history, children }) => {
             className='nav-brand justify-content-start'
             href='/'
           >
-            <img style={{ width: "150px" }} src={newLogo} alt='' />
+            <img style={{ width: "14vw" }} src={newLogo} alt='' />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse

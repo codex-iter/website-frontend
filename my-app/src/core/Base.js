@@ -9,7 +9,7 @@ const Base = ({ children }) => {
     <div>
       <Menu />
       {children}
-      {["/contact", "/about"].includes(window.location.pathname) ? null : (
+      {["/contact"].includes(window.location.pathname) ? null : (
         <div className='container'>
           {" "}
           <footer>
@@ -22,7 +22,7 @@ const Base = ({ children }) => {
             <div className='footer-end'>
               <h2 style={{ color: "#f6f6f6", padding: "5px" }}>FOLLOW US</h2>
               <ContactInfo>
-                <button className='icons-btn'>
+                <button className="icons-btn" style={{"backgroundColor": "#0c1b38"}}>
                   <img src={github} alt='' />
                 </button>
               </ContactInfo>
