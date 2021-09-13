@@ -5,6 +5,10 @@ import ContactInfo from "./ContactInfo";
 import github from "../Assets/Icons/Vector.svg";
 import newLogo from "../Assets/Images/half logo - codex.png";
 const Base = ({ children }) => {
+  function onLoad(event){
+    event.preventDefault();
+    window.location.href="https://github.com/codex-iter";
+  }
   return (
     <div>
       <Menu />
@@ -22,7 +26,7 @@ const Base = ({ children }) => {
             <div className='footer-end'>
               <h2 style={{ color: "#f6f6f6", padding: "5px" }}>FOLLOW US</h2>
               <ContactInfo>
-                <button className="icons-btn" style={{"backgroundColor": "#0c1b38"}}>
+                <button className="icons-btn" style={{"backgroundColor": "#0c1b38"}} onClick={onLoad}>
                   <img src={github} alt='' />
                 </button>
               </ContactInfo>

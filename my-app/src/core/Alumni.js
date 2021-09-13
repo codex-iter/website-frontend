@@ -45,7 +45,6 @@ const Alumni = () => {
             </div>
           </section>
         </Base>
-        <h1>Membres</h1>
       </div>
     );
   };

@@ -80,14 +80,14 @@ code {
 .display > * {
   display: block;
   position: relative;
-  /* left: 6rem; */
   top: 1.5rem;
   text-align: center;
   font-weight: 800;
 }
 
 .display > img {
-  left: 6rem;
+  margin:auto; 
+  left:0;right:0;
 }
 
 .btn-github {
