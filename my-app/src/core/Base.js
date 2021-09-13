@@ -7,7 +7,7 @@ import newLogo from "../Assets/Images/half logo - codex.png";
 const Base = ({ children }) => {
   function onLoad(event){
     event.preventDefault();
-    window.location.href="https://github.com/codex-iter";
+    window.open("https://github.com/codex-iter");
   }
   return (
     <div>

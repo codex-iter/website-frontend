@@ -20,8 +20,9 @@ const Members = () => {
   }, []);
 
   const fetchItems = async () => {
+    
     const response = await fetch(
-      "http://codexweb-backend.herokuapp.com/api/getMember"
+      "https://codexweb-backend.herokuapp.com/api/getMember"
     );
     const members = await response.json();
     console.log(members, "json");

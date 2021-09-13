@@ -49,6 +49,7 @@ const Contact = () => {
         })
        
     }
+    
     return (
         <Base>
         <div className={ Styles.contact_outer }>
@@ -57,7 +58,7 @@ const Contact = () => {
                     <div className={ Styles.left_heading }>Drop us a line.</div>
                     <div className={ Styles.left_sub_heading }>Or DM us on </div>
                     <div className={ Styles.icon_section }>
-                         <CustomSocialIcon svg={ insta } href="https://www.instagram.com/codexiter/"/>
+                         <CustomSocialIcon svg={ insta } href="https://www.instagram.com/codexiter/" />
                          <CustomSocialIcon svg={ facebook } href="https://www.facebook.com/codexiter" />
                          {/* <CustomSocialIcon svg={ twitter } /> */}
                         <CustomSocialIcon svg={ linkedIn } href="https://www.linkedin.com/company/codex-iter/" />

@@ -3,13 +3,13 @@ import React from "react";
 const ContactForm = () => {
   function onLoad(event){
     event.preventDefault();
-    window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdOp_wsPsjwFvxhSRECAxBsUGeL2s4cjJ1SghNLgNPg7f8bHQ/viewform'
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdOp_wsPsjwFvxhSRECAxBsUGeL2s4cjJ1SghNLgNPg7f8bHQ/viewform');
   }
   return (
     <div>
       <form className='form'>
         <div className='text'>
-          <h1>Join our monthly newsletter</h1>
+          <h1 className="sub">Join our monthly newsletter</h1>
         </div>
         <div>
           <button className='btn btn-primary' onClick={onLoad}>Subscribe</button>

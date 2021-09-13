@@ -246,13 +246,13 @@ code {
 .text {
   padding: 2em;
 }
-.form h1 {
+/* .form h1 {
   font-size: 2em;
-  line-height: 80px;
+  line-height: 70px;
   letter-spacing: -1.78px;
   color: var(--clr-light);
   font-weight: bold;
-}
+} */
 
 .form input[type="email"] {
   color: white;
@@ -306,24 +306,24 @@ footer div p {
 }
 
 .form h1{
-  font-size: 6.8vw;
-  line-height: 9vw;
-  letter-spacing: -0.1vw;
+  color: white;
+  font-size: 150px;
+  font-weight: bold; 
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 40px) {
   footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-  /* .form h1 {
-  font-size: 70%;
-  line-height: 80%;
+  .form h1 {
+  font-size:60px;
+  /* line-height: 80%;
   letter-spacing: -1.78%;
   color: var(--clr-light);
-  font-weight: bold; 
-  }*/
+  font-weight: bold;  */
+  } 
 }
 /* slider */
 .jLgnwX {

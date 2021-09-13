@@ -17,7 +17,7 @@ const Alumni = () => {
 
   const fetchItems = async () => {
     const response = await fetch(
-      "http://codexweb-backend.herokuapp.com/api/getAlumni"
+      "https://codexweb-backend.herokuapp.com/api/getAlumni"
     );
     const alumnis = await response.json();
     console.log(alumnis, "json");

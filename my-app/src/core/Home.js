@@ -6,6 +6,10 @@ import Slider from "./Slider";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 const Home = () => {
+  const openInNewTab = (event) => {
+    event.preventDefault();
+    window.open('https://github.com/codex-iter', '_blank', 'noopener,noreferrer')
+  }
   return (
     <div>
       <Base>
@@ -20,7 +24,7 @@ const Home = () => {
                   We Explore.
                 </p>
                 <ContactInfo></ContactInfo>
-                <button className='btn-github' onClick={event =>  window.location.href='https://github.com/codex-iter'}>
+                <button className='btn-github' onClick={openInNewTab}>
                   <div className='btn-container'>
                     <div>
                       <img
