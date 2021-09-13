@@ -63,17 +63,23 @@ const Home = () => {
             <section className='split2'>
               <div className='display'>
                 <img src='https://img.icons8.com/fluency-systems-regular/48/000000/guest-male.png' />
+                <br/>
                 <h1>100+</h1>
+                <br/>
                 <h2>Members</h2>
               </div>
               <div className='display'>
                 <img src='https://img.icons8.com/ios/50/000000/repository.png' />
+                <br/>
                 <h1>30+</h1>
+                <br/>
                 <h2>Projects</h2>
               </div>
               <div className='display'>
                 <img src='https://img.icons8.com/ios-filled/50/000000/merge-git.png' />
+                <br/>
                 <h1>1K+</h1>
+                <br/>
                 <h2>Commits</h2>
               </div>
             </section>
