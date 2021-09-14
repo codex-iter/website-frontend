@@ -18,13 +18,13 @@ const Base = ({ children }) => {
           {" "}
           <footer>
             <div>
-              <img style={{ width: "150px" }} src={newLogo} alt='' />
+              <img style={{ width: "15vw" }} src={newLogo} alt='' />
             </div>
             <div>
-              <p style={{fontSize:"130%"}}>A community of coders learning and exploring together</p>
+              <p style={{fontSize:"2vw"}}>A community of coders learning and exploring together</p>
             </div>
-            <div className='footer-end'>
-              <h2 style={{ color: "#f6f6f6", padding: "5px" }}>FOLLOW US</h2>
+            <div>
+              {/* <p style={{ color: "#f6f6f6", padding: "3px",fontSize:"3vw" }}>FOLLOW US</p> */}
               <ContactInfo>
                 <button className="icons-btn" style={{"backgroundColor": "#0c1b38"}} onClick={onLoad}>
                   <img src={github} alt='' />
