@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { css } from "@emotion/react";
 import SyncLoader from "react-spinners/SyncLoader";
 
@@ -11,6 +11,7 @@ const override = css`
   left: 50%;
   transform: translate(-50%, -50%);
 `;
+
 const Spinner = () => {
   return (
     <>

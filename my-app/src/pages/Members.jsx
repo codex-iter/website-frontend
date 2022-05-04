@@ -1,26 +1,28 @@
 import React, { useState, useEffect } from "react";
-import Base from "./Base";
-import UserCard from "./userCard";
+import Base from "../layouts/Base";
+import UserCard from "../components/UserCard";
 import "../Styles/members.css";
-import Spinner from "./Spinner";
+import Spinner from "../components/Spinner";
+
 let cord;
 let teach;
 let memb;
 
 const Members = () => {
   const [loadSpinner, setLoadSpinner] = useState(true);
+  const [members, setMembers] = useState([]);
+
   useEffect(() => {
     setTimeout(() => {
       setLoadSpinner(false);
     }, 1000);
   }, []);
-  const [members, setMembers] = useState([]);
+
   useEffect(() => {
     fetchItems();
   }, []);
 
   const fetchItems = async () => {
-    
     const response = await fetch(
       "https://codexweb-backend.herokuapp.com/api/getMember"
     );
@@ -28,6 +30,7 @@ const Members = () => {
     console.log(members, "json");
     setMembers(members);
   };
+
   const check = () => {
     cord = members.filter((member) => {
       return member.role === "coordinator";
@@ -40,6 +43,7 @@ const Members = () => {
     });
     console.log(cord);
   };
+  
   const getMemberData = () => {
     return (
       <div>
@@ -47,8 +51,8 @@ const Members = () => {
         <Base>
           <div>
             <section>
-              <div className='container-x'>
-                <div className='container1-x'>
+              <div className="container-x">
+                <div className="container1-x">
                   <h1>Meet our community</h1>
                   <h2>Teacher coordinators</h2>
                 </div>
@@ -56,8 +60,8 @@ const Members = () => {
             </section>
             {/* teachers */}
             <section>
-              <div className='container-x'>
-                <div className='split1-x'>
+              <div className="container-x">
+                <div className="split1-x">
                   {teach.map((member) => (
                     <UserCard
                       img={member.githubDP}
@@ -73,9 +77,9 @@ const Members = () => {
             </section>
             {/* cordinators */}
             <section>
-              <div className='container-x'>
+              <div className="container-x">
                 <h2>Current Coordinators</h2>
-                <div className='split1-x'>
+                <div className="split1-x">
                   {cord.map((member) => (
                     <UserCard
                       img={member.githubDP}
@@ -91,9 +95,9 @@ const Members = () => {
             </section>
             {/* members */}
             <section>
-              <div className='container'>
-                <h2 className='class1'>Members</h2>
-                <div className='split1-x'>
+              <div className="container">
+                <h2 className="class1">Members</h2>
+                <div className="split1-x">
                   {memb.map((member) => (
                     <UserCard
                       img={member.githubDP}
