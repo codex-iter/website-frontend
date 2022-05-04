@@ -23,9 +23,11 @@ function Event() {
       setState({ eventData: [], loading: false, error: error });
     }
   };
+
   useEffect(() => {
     getEventsData();
   }, []);
+  
   if (state.loading) {
     return (
       <div>
@@ -33,14 +35,14 @@ function Event() {
       </div>
     );
   }
-  var count = 0;
+
   return (
     <Base>
       {state.eventData && (
         <>
-          <section className='bgevent'>
+          <section className="bgevent">
             {" "}
-            <div class='heading1'>
+            <div className="heading1">
               <h1>Events Organized By Our Community</h1>
             </div>
           </section>

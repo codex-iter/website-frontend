@@ -1,9 +1,9 @@
 import React from "react";
 import Menu from "./Menu";
-import Logo from "../Assets/Images/codex logo 2.png";
 import ContactInfo from "./ContactInfo";
-import github from "../Assets/Icons/Vector.svg";
-import newLogo from "../Assets/Images/half logo - codex.png";
+import github from "../assets/icons/Vector.svg";
+import newLogo from "../assets/images/half logo - codex.png";
+
 const Base = ({ children }) => {
   function onLoad(event){
     event.preventDefault();

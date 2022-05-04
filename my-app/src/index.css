@@ -262,7 +262,7 @@ code {
   color: white;
   font-size: 18px;
   text-align: center;
-  background-image: url(./Assets/Images/emial.png);
+  background-image: url(./assets/images/emial.png);
   background-color: var(--clr-primary);
   background-position: 10px 10px;
   background-repeat: no-repeat;

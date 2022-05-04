@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import EventSilder from "../EventSilder";
 
 const EventData = (props) => {
@@ -7,16 +7,16 @@ const EventData = (props) => {
 
   return (
     <div>
-      <section className='bgevent'>
-        <div className='container-y'>
-          <div className='split-y'>
-            <div className='card_content'>
+      <section className="bgevent">
+        <div className="container-y">
+          <div className="split-y">
+            <div className="card_content">
               {children}
               <p>
                 {description}
                 <p>
                   <b
-                    class='organizers'
+                    className="organizers"
                     style={{ textDecoration: "underline", margin: "10px 0px" }}
                   >
                     Organizers

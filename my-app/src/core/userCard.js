@@ -1,8 +1,6 @@
-import Card from "react-bootstrap/Card";
-import logo from "../Assets/Images/user.png";
-import twitter from "../Assets/Images/twitter.png";
-import linkedin from "../Assets/Images/linkedin.png";
-import github from "../Assets/Images/github.png";
+import twitter from "../assets/images/twitter.png";
+import linkedin from "../assets/images/linkedin.png";
+import github from "../assets/images/github.png";
 import "../Styles/members.css";
 
 //import { Link, NavLink } from "react-router-dom";
@@ -12,20 +10,20 @@ const UserCard = (props) => {
   return (
     <div className="cardx">
       <div className="userImage">
-        <img src={img} />
+        <img src={img} alt="user" />
       </div>
       <div className="name">{name}</div>
       <div className="title">{skill}</div>
       <center>
         <div className="img-btn">
-          <a href={twitterLink} target="_blank">
-            <img src={twitter} />
+          <a href={twitterLink} target="_blank" rel="noreferrer">
+            <img src={twitter} alt="twitter" />
           </a>
-          <a href={linkedinLink} target="_blank">
-            <img src={linkedin} />
+          <a href={linkedinLink} target="_blank" rel="noreferrer">
+            <img src={linkedin} alt="linkedin" />
           </a>
-          <a href={githubLink} target="_blank">
-            <img src={github} />
+          <a href={githubLink} target="_blank" rel="noreferrer">
+            <img src={github} alt="github" />
           </a>
         </div>
       </center>

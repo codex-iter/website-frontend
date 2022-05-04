@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import Logo from "../Assets/Images/codex logo 2.png";
 import "../Styles/navbar.css";
-import newLogo from "../Assets/Images/half logo - codex.png";
+import newLogo from "../assets/images/half logo - codex.png";
 const currentTab = (history, path) => {
   if (history.location.pathname === path) {
     // console.log(history.location.pathname);
@@ -64,8 +63,9 @@ const Menu = ({ history, children }) => {
               Members
             </Link> */}
               <div className='dropdown nav-link'>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a
-                  // class="btn btn-secondary dropdown-toggle"
+                  // className="btn btn-secondary dropdown-toggle"
                   className='custom-dropdown'
                   // style={{ color: "white", padding: "2em", textAlign: "center" }}
                   style={getColor1(history, window.location.pathname)}
@@ -78,7 +78,7 @@ const Menu = ({ history, children }) => {
                   Community
                 </a>
 
-                <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
+                <ul className='dropdown-menu' aria-labelledby='dropdownMenuLink'>
                   <Link
                     style={getColor(history, "/members")}
                     className=' dropdown-item'

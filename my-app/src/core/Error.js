@@ -1,8 +1,8 @@
 import React from "react";
 import Styles from "../Styles/Error.module.css"
-import error from "../Assets/Icons/error.svg"
-import arrow from "../Assets/Icons/arrow.svg"
-import CustomButton from "../Components/Buttons"
+import error from "../assets/icons/error.svg"
+import arrow from "../assets/icons/arrow.svg"
+import CustomButton from "../components/Buttons"
 const Error = (props) => {
     const handleClick = () => {
         props.history.push("/")

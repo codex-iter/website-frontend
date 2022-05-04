@@ -1,31 +1,35 @@
 import React from "react";
 import Base from "./Base";
-import banner from "../Assets/Images/19362653 1.png";
-import gif from "../Assets/Images/Codex.gif";
+import banner from "../assets/images/19362653 1.png";
 import Slider from "./Slider";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+
 const Home = () => {
   const openInNewTab = (event) => {
     event.preventDefault();
-    window.open('https://github.com/codex-iter', '_blank', 'noopener,noreferrer')
-  }
+    window.open(
+      "https://github.com/codex-iter",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
   return (
     <div>
       <Base>
-        <div className='container'>
-          <section className='split'>
+        <div className="container">
+          <section className="split">
             <div>
-              <div className='container1'>
+              <div className="container1">
                 {" "}
-                <span className='heading'>A Community of Coders from ITER</span>
-                <p className='p'>
+                <span className="heading">A Community of Coders from ITER</span>
+                <p className="p">
                   We Code, <br />
                   We Explore.
                 </p>
                 <ContactInfo></ContactInfo>
-                <button className='btn-github' onClick={openInNewTab}>
-                  <div className='btn-container'>
+                <button className="btn-github" onClick={openInNewTab}>
+                  <div className="btn-container">
                     <div>
                       <img
                         style={{
@@ -36,7 +40,8 @@ const Home = () => {
                           padding: "0px",
                           display: "inline-block",
                         }}
-                        src='https://img.icons8.com/fluency-systems-filled/48/000000/github.png'
+                        src="https://img.icons8.com/fluency-systems-filled/48/000000/github.png"
+                        alt="github"
                       />
                     </div>
                     <div>
@@ -49,51 +54,51 @@ const Home = () => {
 
             <div>
               <img
-                className='banner'
-                style={{ width: "110%",height:"85%"}}
+                className="banner"
+                style={{ width: "110%", height: "85%" }}
                 src={banner}
-                alt=''
+                alt=""
               />
             </div>
           </section>
         </div>
         <section style={{ backgroundColor: "#0c1b38" }}>
-          <div className='container container-spe'>
+          <div className="container container-spe">
             {" "}
-            <section className='split2'>
-              <div className='display'>
-                <img src='https://img.icons8.com/fluency-systems-regular/48/000000/guest-male.png' />
-                <br/>
+            <section className="split2">
+              <div className="display">
+                <img src="https://img.icons8.com/fluency-systems-regular/48/000000/guest-male.png" alt="members" />
+                <br />
                 <h1>100+</h1>
-                <br/>
+                <br />
                 <h2>Members</h2>
               </div>
-              <div className='display'>
-                <img src='https://img.icons8.com/ios/50/000000/repository.png' />
-                <br/>
+              <div className="display">
+                <img src="https://img.icons8.com/ios/50/000000/repository.png" alt="projects" />
+                <br />
                 <h1>30+</h1>
-                <br/>
+                <br />
                 <h2>Projects</h2>
               </div>
-              <div className='display'>
-                <img src='https://img.icons8.com/ios-filled/50/000000/merge-git.png' />
-                <br/>
+              <div className="display">
+                <img src="https://img.icons8.com/ios-filled/50/000000/merge-git.png" alt="commits" />
+                <br />
                 <h1>1K+</h1>
-                <br/>
+                <br />
                 <h2>Commits</h2>
               </div>
             </section>
           </div>
         </section>
-        <div className='container  .container-spe'>
+        <div className="container  .container-spe">
           {" "}
-          <section className='slider'>
-            <div className='container-testimonial-2'>
+          <section className="slider">
+            <div className="container-testimonial-2">
               <Slider></Slider>
             </div>
           </section>
         </div>
-        <section className='contact-form'>
+        <section className="contact-form">
           <ContactForm></ContactForm>
         </section>
       </Base>

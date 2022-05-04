@@ -1,10 +1,9 @@
 import React from "react";
-import insta from "../Assets/Icons/insta.svg";
-import linkedin from "../Assets/Icons/linkedIn.svg";
-import email from "../Assets/Icons/email.svg";
-import twitter from "../Assets/Icons/twitter.svg";
-import fb from "../Assets/Icons/facebook.svg";
-import yt from "../Assets/Icons/YoutubeLogo.svg";
+import insta from "../assets/icons/insta.svg";
+import linkedin from "../assets/icons/linkedIn.svg";
+import fb from "../assets/icons/facebook.svg";
+import yt from "../assets/icons/YoutubeLogo.svg";
+
 const ContactInfo = ({ children }) => {
   return (
     <div>

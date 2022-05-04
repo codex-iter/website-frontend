@@ -1,5 +1,5 @@
 import React from "react";
-import badge from "../Assets/Images/Badge.png";
+import badge from "../assets/images/Badge.png";
 
 const Testimonial = () => {
   return (
