@@ -1,25 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css"
-import Home from "./core/Home";
-import Members from "./core/Members";
-import Event from "./core/Event";
-import Contact from "./core/Contact";
-import About from "./core/About";
-import Error from "./core/Error";
-import Alumni from "./core/Alumni";
+import "./App.css";
+import Home from "./pages/Home";
+import Members from "./pages/Members";
+import Event from "./pages/Event";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Error from "./pages/404";
+import Alumni from "./pages/Alumni.jsx";
+
 const Routes = () => {
   return (
-    <div className='App'>
+    <div className="App">
       <Router>
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/members' exact component={Members} />
-          <Route path='/alumni' exact component={Alumni} />
-          <Route path='/events' exact component={Event} />
-          <Route path='/contact' exact component={Contact} />
-          <Route path='/about' exact component={About} />
-          <Route path='' component={Error} />
+          <Route path="/" exact component={Home} />
+          <Route path="/members" exact component={Members} />
+          <Route path="/alumni" exact component={Alumni} />
+          <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/events" exact component={Event} />
+
+          <Route path="" component={Error} />
         </Switch>
       </Router>
     </div>

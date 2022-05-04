@@ -1,0 +1,129 @@
+.about_outer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.about_banner {
+  width: 100%;
+  height: 500px;
+}
+
+.about_banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_content {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.content_left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.content_heading {
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  font-size: 35px;
+  line-height: 48px;
+  letter-spacing: -0.89px;
+  color: #F7F5F5;
+  margin-left: 82px;
+}
+
+.content_para {
+  margin-left: 82px;
+  margin-top: 26px;
+  width: 500px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 38px;
+  letter-spacing: -0.47px;
+  color: #F8F8F8;
+}
+
+.content_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.newsletter_heading {
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  line-height: 48px;
+  text-align: right;
+  letter-spacing: -0.89px;
+  color: #F7F5F5;
+  margin-bottom: 20px;
+}
+
+.input_email {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width:640px) and (max-width:850px) {
+  .about_content {
+    flex-direction: column;
+  }
+
+  .content_left {
+    width: 100%;
+  }
+
+  .content_right {
+    width: 100%;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .about_content {
+    flex-direction: column;
+  }
+
+  .content_left {
+    width: calc(100% - 20px);
+  }
+
+  .content_heading {
+    margin-left: 20px;
+  }
+
+  .content_para {
+    margin-left: 20px;
+    width: calc(100% - 20px);
+  }
+
+  .content_right {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .newsletter_heading {
+    text-align: center;
+  }
+
+  .button_margin {
+    margin-bottom: 30px;
+  }
+}
