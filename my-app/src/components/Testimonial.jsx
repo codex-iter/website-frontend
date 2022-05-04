@@ -3,15 +3,15 @@ import badge from "../assets/images/Badge.png";
 
 const Testimonial = () => {
   return (
-    <div className='container-testimonial'>
+    <div className="container-testimonial">
       <div>
         <img
-          className='avatar'
-          src='https://www.w3schools.com/w3images/avatar_g2.jpg'
-          alt=''
+          className="avatar"
+          src="https://www.w3schools.com/w3images/avatar_g2.jpg"
+          alt=""
         />
       </div>
-      <div className='content'>
+      <div className="content">
         <h1>David Sylvian</h1>
         <br />
         <h6>CEO, Manafon</h6>
@@ -22,7 +22,7 @@ const Testimonial = () => {
         </p>
       </div>
       <div>
-        <img className='ba' src={badge} alt='' />
+        <img className="ba" src={badge} alt="" />
       </div>
     </div>
   );

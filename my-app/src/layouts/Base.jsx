@@ -1,21 +1,21 @@
 import React from "react";
 import Menu from "../components/Menu";
-import ContactInfo from "./ContactInfo";
-import github from "../assets/icons/Vector.svg";
+import ContactInfo from "../components/ContactInfo";
+import github from "../assets/icons/github.svg";
 import newLogo from "../assets/images/half logo - codex.png";
 
 const Base = ({ children }) => {
-  function onLoad(event) {
+  function handleCtaClick(event) {
     event.preventDefault();
     window.open("https://github.com/codex-iter");
   }
+
   return (
     <div>
       <Menu />
       {children}
       {["/contact"].includes(window.location.pathname) ? null : (
         <div className="container">
-          {" "}
           <footer>
             <div>
               <img style={{ width: "15vw" }} src={newLogo} alt="" />
@@ -26,12 +26,11 @@ const Base = ({ children }) => {
               </p>
             </div>
             <div>
-              {/* <p style={{ color: "#f6f6f6", padding: "3px",fontSize:"3vw" }}>FOLLOW US</p> */}
               <ContactInfo>
                 <button
                   className="icons-btn"
                   style={{ backgroundColor: "#0c1b38" }}
-                  onClick={onLoad}
+                  onClick={handleCtaClick}
                 >
                   <img src={github} alt="" />
                 </button>
