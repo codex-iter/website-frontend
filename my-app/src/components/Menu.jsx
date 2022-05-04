@@ -2,7 +2,7 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-import "../Styles/navbar.css";
+import "../styles/navbar.css";
 import newLogo from "../assets/images/half logo - codex.png";
 
 const currentTab = (history, path) => {

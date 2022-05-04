@@ -1,7 +1,7 @@
 import React from "react";
 
 import CustomButton from "../components/Buttons";
-import Styles from "../Styles/Error.module.css";
+import Styles from "../styles/Error.module.css";
 import error from "../assets/icons/error.svg";
 import arrow from "../assets/icons/arrow.svg";
 

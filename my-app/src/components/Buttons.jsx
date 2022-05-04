@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../Styles/Buttons.module.css";
+import Styles from "../styles/Buttons.module.css";
 
 const CustomButton = ({ text, page, handleClick }) => {
   return (

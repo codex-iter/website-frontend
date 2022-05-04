@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Base from "../layouts/Base";
 import UserCard from "../components/UserCard";
 import Spinner from "../components/Spinner";
-import "../Styles/members.css";
+import "../styles/members.css";
 
 const Alumni = () => {
   const [loadSpinner, setLoadSpinner] = useState(true);

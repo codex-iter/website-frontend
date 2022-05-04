@@ -6,7 +6,7 @@ import CustomButton from "../components/Buttons";
 import CustomSocialIcon from "../components/SocialIcons"
 
 import "toastify-js/src/toastify.css"
-import Styles from "../Styles/Contact.module.css";
+import Styles from "../styles/Contact.module.css";
 
 import insta from "../assets/icons/insta.svg"
 import facebook from "../assets/icons/facebook.svg"

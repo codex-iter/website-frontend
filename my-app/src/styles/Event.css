@@ -1,0 +1,161 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+body {
+    font-family:'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+} */
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3 {
+  /*color:white;*/
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+
+header,
+section {
+  padding: 2rem 0;
+}
+
+#image1 {
+  display: block;
+  max-width: 100%;
+  width: 34rem;
+}
+
+.split-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.split-y>* {
+  margin: 20px 0px;
+}
+
+@media(min-width:40em) {
+  .split-y {
+    flex-direction: row;
+  }
+
+  .split-y>* {
+    flex-basis: 50%;
+  }
+
+  .split-y>*+* {
+    margin-left: 2em;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container-y--narrow {
+  max-width: 35rem;
+}
+
+.container-y {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.bgeevent1 {
+
+  color: white;
+
+  background: #0C1B38;
+}
+
+.bgevent {
+  color: white;
+  background: #0D1026;
+}
+
+.card_content {
+  grid-area: text;
+  width: 80%;
+
+  place-self: center;
+  text-align: left;
+
+  display: grid;
+  gap: 1em;
+  place-items: start;
+}
+
+.heading1 {
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+.organizers {
+  color: white;
+}
+
+.slick-next {
+  right: 0px;
+  visibility: hidden;
+}
+
+.slick-prev {
+  /* left: -25px; */
+  left: 0;
+  visibility: hidden;
+}

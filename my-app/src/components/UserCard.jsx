@@ -1,7 +1,7 @@
 import twitter from "../assets/images/twitter.png";
 import linkedin from "../assets/images/linkedin.png";
 import github from "../assets/images/github.png";
-import "../Styles/members.css";
+import "../styles/members.css";
 
 //import { Link, NavLink } from "react-router-dom";
 

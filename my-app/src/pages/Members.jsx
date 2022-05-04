@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Base from "../layouts/Base";
 import UserCard from "../components/UserCard";
-import "../Styles/members.css";
+import "../styles/members.css";
 import Spinner from "../components/Spinner";
 
 let cord;

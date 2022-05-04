@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../Styles/Event.css";
+import "../styles/Event.css";
 import Base from "../layouts/Base";
 import EventData from "../components/events/EventData";
 import EventData2 from "../components/events/EventData2";

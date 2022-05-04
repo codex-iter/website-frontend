@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../Styles/Inputs.module.css";
+import styles from "../styles/Inputs.module.css";
 
 const CustomInput = ({
   name,
@@ -15,13 +15,13 @@ const CustomInput = ({
       className={
         path === "contact"
           ? type === "text"
-            ? Styles.input_outer_contact
-            : Styles.input_outer_contact_message
-          : Styles.input_outer_about
+            ? styles.input_outer_contact
+            : styles.input_outer_contact_message
+          : styles.input_outer_about
       }
     >
       {svg ? (
-        <span className={Styles.svg_span}>
+        <span className={styles.svg_span}>
           <img src={svg} alt="" />
         </span>
       ) : null}
@@ -40,7 +40,7 @@ const CustomInput = ({
           value={value}
           placeholder={placeholder}
           onChange={handleChange}
-          className={Styles.textarea}
+          className={styles.textarea}
         />
       )}
     </div>
