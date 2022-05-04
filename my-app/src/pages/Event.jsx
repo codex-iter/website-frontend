@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/Event.css";
-import Base from "./Base";
-import EventData from "./events/EventData";
-import EventData2 from "./events/EventData2";
-import Spinner from "./Spinner";
+import Base from "../layouts/Base";
+import EventData from "../components/events/EventData";
+import EventData2 from "../components/events/EventData2";
+import Spinner from "../components/Spinner";
+
 function Event() {
   const [state, setState] = useState({
     eventData: [],
@@ -27,7 +28,7 @@ function Event() {
   useEffect(() => {
     getEventsData();
   }, []);
-  
+
   if (state.loading) {
     return (
       <div>

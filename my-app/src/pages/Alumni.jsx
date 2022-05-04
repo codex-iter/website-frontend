@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Base from "./Base";
-import UserCard from "./userCard";
+
+import Base from "../layouts/Base";
+import UserCard from "../components/UserCard";
+import Spinner from "../components/Spinner";
 import "../Styles/members.css";
-import Spinner from "./Spinner";
+
 const Alumni = () => {
   const [loadSpinner, setLoadSpinner] = useState(true);
+  const [alumnis, setAlumnis] = useState([]);
+
   useEffect(() => {
     setTimeout(() => {
       setLoadSpinner(false);
     }, 1000);
   }, []);
-  const [alumnis, setAlumnis] = useState([]);
+
   useEffect(() => {
     fetchItems();
   }, []);

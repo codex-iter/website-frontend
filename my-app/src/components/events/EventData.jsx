@@ -1,5 +1,5 @@
 import React from "react";
-import EventSilder from "../EventSilder";
+import EventSilder from "./EventSilder";
 
 const EventData = (props) => {
   console.log("ed1", props);

@@ -1,9 +1,10 @@
 import React from "react";
-import EventSilder from "../EventSilder";
+import EventSilder from "./EventSilder";
 
 const EventData2 = (props) => {
   console.log("event 2", props);
   const { description, organizers, images, children } = props;
+  
   return (
     <section className="bgeevent1">
       <div className="container-y">

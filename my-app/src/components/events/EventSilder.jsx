@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 const EventSilder = (props) => {
   const { images } = props;
   console.log("img", props);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -15,18 +16,21 @@ const EventSilder = (props) => {
     slidesToScroll: 1,
     autoplay: true,
   };
+
   return (
     <Carousel {...settings}>
       {" "}
       {images.map((img, index) => (
         <Wrap key={index}>
-          <img src={img} alt='' />
+          <img src={img} alt="" />
         </Wrap>
       ))}
     </Carousel>
   );
 };
+
 export default EventSilder;
+
 const Carousel = styled(Slider)`
   max-width: 450px;
   border-radius: 10px;
@@ -47,6 +51,7 @@ const Carousel = styled(Slider)`
     z-index: 1;
   }
 `;
+
 const Wrap = styled.div`
   cursor: pointer;
   max-width: 450px;
