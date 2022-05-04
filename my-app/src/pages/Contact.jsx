@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import Base from "./Base"
-import Styles from "../Styles/Contact.module.css";
-import CustomSocialIcon from "../components/SocialIcons"
+import Toastify from 'toastify-js'
+import Base from "../layouts/Base"
 import CustomInput from "../components/Input";
 import CustomButton from "../components/Buttons";
+import CustomSocialIcon from "../components/SocialIcons"
+
+import "toastify-js/src/toastify.css"
+import Styles from "../Styles/Contact.module.css";
+
 import insta from "../assets/icons/insta.svg"
 import facebook from "../assets/icons/facebook.svg"
 import linkedIn from "../assets/icons/linkedIn.svg"
 import YT from "../assets/icons/YoutubeLogo.svg";
 import userSvg from "../assets/icons/user.svg";
 import emailSvg from "../assets/icons/email.svg";
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css"
 
 const Contact = () => {
     const [name, setName] = useState("");
