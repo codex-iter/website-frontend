@@ -1,5 +1,5 @@
 import React from "react";
-import Base from "./Base";
+import Base from "../layouts/Base";
 import Styles from "../Styles/About.module.css";
 import banner from "../assets/images/about.png";
 import CustomButton from "../components/Buttons";
