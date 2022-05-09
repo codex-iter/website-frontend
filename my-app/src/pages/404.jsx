@@ -5,8 +5,8 @@ import error from "../assets/icons/error.svg";
 const NotFound = () => {
   return (
     <div className="py-12 lg:py-16 bg-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <img src={error} alt="404 Not Found" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <img src={error} alt="404 Not Found" className="max-w-xl" />
         <h1 className="text-4xl tracking-tight font-extrabold text-pastel sm:text-5xl md:text-6xl my-8">
           Bummer, Page not found.
         </h1>
