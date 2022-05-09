@@ -65,7 +65,7 @@ const LoadingSkeleton = () => {
   );
   return (
     <div className="py-12">
-      <div className="h-12 w-full md:w-1/3 bg-slate-400 rounded mb-12 animate-pulse" />
+      <div className="h-12 w-full mx-auto md:w-1/3 bg-slate-400 rounded mb-12 animate-pulse" />
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
         {Array.from({ length: 4 }, (_, i) => (
           <LoadingUser key={i} />
@@ -101,7 +101,7 @@ const Members = () => {
       ) : (
         <>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-left sm:text-3xl md:text-4xl py-12">
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Teacher coordinators
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
@@ -121,7 +121,7 @@ const Members = () => {
             </div>
           </section>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-left sm:text-3xl md:text-4xl py-12">
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Present Coordinators
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
@@ -141,7 +141,7 @@ const Members = () => {
             </div>
           </section>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-left sm:text-3xl md:text-4xl py-12">
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Members
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
@@ -192,7 +192,7 @@ const Almunus = () => {
       ) : (
         <>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-left sm:text-3xl md:text-4xl py-12">
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Our Alumni
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
