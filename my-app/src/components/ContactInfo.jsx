@@ -1,47 +1,61 @@
 import React from "react";
-import insta from "../assets/icons/insta.svg";
-import linkedin from "../assets/icons/linkedIn.svg";
-import fb from "../assets/icons/facebook.svg";
-import yt from "../assets/icons/YoutubeLogo.svg";
+import { Icon } from "@iconify/react";
+import githubIcon from "@iconify/icons-cib/github";
+import linkedinIcon from "@iconify/icons-cib/linkedin-in";
+import youtubeIcon from "@iconify/icons-cib/youtube";
+import facebookIcon from "@iconify/icons-cib/facebook";
+import instagramIcon from "@iconify/icons-cib/instagram";
+import siteConfig from "../site.config";
 
-const ContactInfo = ({ children }) => {
+const ContactInfo = ({ className }) => {
+  const { contacts } = siteConfig;
   return (
-    <div>
-      <div className="icons">
-        <a
-          className="icons-btn"
-          href="https://www.instagram.com/codexiter/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src={insta} alt="" />
-        </a>
-        <a
-          className="icons-btn"
-          href="https://www.youtube.com/channel/UCu1S3gm2ODknxDlkpPX2RrA"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src={yt} alt="" />
-        </a>
-        <a
-          className="icons-btn"
-          href="https://www.linkedin.com/company/codex-iter"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src={linkedin} alt="" />
-        </a>
-        <a
-          className="icons-btn"
-          href="https://www.facebook.com/codexiter"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <img src={fb} alt="" />
-        </a>
-        {children}
-      </div>
+    <div
+      className={
+        "flex space-x-4 text-slate-500 items-center lg:justify-start " +
+        className
+      }
+    >
+      <a
+        href={contacts.github}
+        className="hover:text-slate-300"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon={githubIcon} className="h-6 w-6" />
+      </a>
+      <a
+        href={contacts.instagram}
+        className="hover:text-slate-300"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon={instagramIcon} className="h-6 w-6" />
+      </a>
+      <a
+        href={contacts.linkedin}
+        className="hover:text-slate-300"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon={linkedinIcon} className="h-6 w-6" />
+      </a>
+      <a
+        href={contacts.youtube}
+        className="hover:text-slate-300"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon={youtubeIcon} className="h-6 w-6" />
+      </a>
+      <a
+        href={contacts.facebook}
+        className="hover:text-slate-300"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon={facebookIcon} className="h-6 w-6" />
+      </a>
     </div>
   );
 };
