@@ -15,7 +15,7 @@ export default function Hero() {
             <p className="mb-3 text-base text-slate-400 sm:mb-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               A Community of Coders from ITER
             </p>
-            <h1 className="text-4xl tracking-tight font-extrabold text-pastel sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl tracking-wide font-extrabold text-pastel sm:text-5xl md:text-6xl">
               We Code, <br /> We Explore{" "}
             </h1>
             <div className="max-w-xl mx-auto my-6 lg:my-8">
