@@ -16,7 +16,7 @@ export default function Hero() {
               A Community of Coders from ITER
             </p>
             <h1 className="text-4xl tracking-tight font-extrabold text-pastel sm:text-5xl md:text-6xl">
-              we code, <br /> we explore.{" "}
+              We Code, <br /> We Explore{" "}
             </h1>
             <div className="max-w-xl mx-auto my-6 lg:my-8">
               <ContactInfo className="justify-center" />
