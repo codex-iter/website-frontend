@@ -7,6 +7,7 @@ import linkedinIcon from "@iconify/icons-cib/linkedin-in";
 import { API_URL } from "../lib/constants";
 import groupBy from "../lib/groupBy";
 import { toTitleCase } from "../lib/string";
+import classNames from "../lib/classNames";
 
 const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
   return (
@@ -259,8 +260,4 @@ export default function Community() {
       </div>
     </div>
   );
-}
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
 }
