@@ -11,7 +11,7 @@ import classNames from "../lib/classNames";
 
 const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
   return (
-    <div>
+    <div className="w-64">
       <div className="flex flex-col items-center justify-center text-center">
         <img className="h-32 w-32 rounded-full" src={img} alt={name} />
         <h1 className="font-semibold text-2xl mt-2 text-slate-300">
@@ -105,7 +105,7 @@ const Members = () => {
             <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Teacher coordinators
             </h2>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.teacher?.map(
                 ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
@@ -125,7 +125,7 @@ const Members = () => {
             <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Present Coordinators
             </h2>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.coordinator?.map(
                 ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
@@ -196,7 +196,7 @@ const Almunus = () => {
             <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
               Our Alumni
             </h2>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-12">
+            <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {almunus?.map(
                 ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
