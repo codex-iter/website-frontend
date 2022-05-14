@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tab } from "@headlessui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classNames from "../lib/classNames";
+import groupBy from "../lib/groupBy";
 
 const EventSilder = ({ images, className }) => {
   const settings = {
@@ -87,71 +88,50 @@ const Event = ({
   );
 };
 
+const LoadingSkeleton = () => {
+  return (
+    <div className="py-12 flex mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-wrap">
+      <div className="w-full md:w-2/3">
+        <div className="h-12 w-full md:w-1/3 bg-slate-400 rounded mb-12 animate-pulse" />
+        <div className="h-12 w-full md:w-2/3 bg-slate-400 rounded mb-12 animate-pulse" />
+      </div>
+      <div className="w-full md:w-1/3 flex justify-end">
+        <div className="h-96 w-96 bg-slate-400 rounded animate-pulse" />
+      </div>
+    </div>
+  );
+};
+
 export default function Events() {
-  let [categories] = useState({
-    Live: [
-      {
-        id: 1,
-        title: "Codex-CTF",
-        description:
-          "A fun filled week of learning hacking and competion worth winning. We had 3 winners for the final event each receiving goodies from over sponsers and a certificate signed by our HOD maam.",
-        organizers: ["codex-iter", "geeksforgeeks", "coding ninjas"],
-        images: [
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/b693956cdea637352c418142c957574f67f84e4c.jpeg?alt=media&token=40d60907-6190-45f1-814a-be82b8adab33",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/3e170696ee8bcc26ecb1c967adddaa3b728a427a.jpeg?alt=media&token=2328b0ec-3c49-42ee-ba52-e1a74d1c9d2f",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/01ef0c7a2e3a71e00e3c5fb6556a1e5f164628cd.jpeg?alt=media&token=0408d9e1-c029-40ac-92e1-a3bdfcb79a91",
-        ],
-        link: "https://github.com",
-        status: "live",
-      },
-    ],
-    Upcoming: [
-      {
-        id: 2,
-        title: "Codex-CTF 1",
-        description:
-          "A fun filled week of learning hacking and competion worth winning. We had 3 winners for the final event each receiving goodies from over sponsers and a certificate signed by our HOD maam.",
-        organizers: ["codex-iter", "geeksforgeeks", "coding ninjas"],
-        images: [
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/b693956cdea637352c418142c957574f67f84e4c.jpeg?alt=media&token=40d60907-6190-45f1-814a-be82b8adab33",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/3e170696ee8bcc26ecb1c967adddaa3b728a427a.jpeg?alt=media&token=2328b0ec-3c49-42ee-ba52-e1a74d1c9d2f",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/01ef0c7a2e3a71e00e3c5fb6556a1e5f164628cd.jpeg?alt=media&token=0408d9e1-c029-40ac-92e1-a3bdfcb79a91",
-        ],
-        link: "https://github.com",
-        status: "upcoming",
-      },
-      {
-        id: 3,
-        title: "Codex-CTF 2",
-        description:
-          "A fun filled week of learning hacking and competion worth winning. We had 3 winners for the final event each receiving goodies from over sponsers and a certificate signed by our HOD maam.",
-        organizers: ["codex-iter", "geeksforgeeks", "coding ninjas"],
-        images: [
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/b693956cdea637352c418142c957574f67f84e4c.jpeg?alt=media&token=40d60907-6190-45f1-814a-be82b8adab33",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/3e170696ee8bcc26ecb1c967adddaa3b728a427a.jpeg?alt=media&token=2328b0ec-3c49-42ee-ba52-e1a74d1c9d2f",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/01ef0c7a2e3a71e00e3c5fb6556a1e5f164628cd.jpeg?alt=media&token=0408d9e1-c029-40ac-92e1-a3bdfcb79a91",
-        ],
-        link: "https://github.com",
-        status: "upcoming",
-      },
-    ],
-    Past: [
-      {
-        id: 4,
-        title: "Codex-CTF -1",
-        description:
-          "A fun filled week of learning hacking and competion worth winning. We had 3 winners for the final event each receiving goodies from over sponsers and a certificate signed by our HOD maam.",
-        organizers: ["codex-iter", "geeksforgeeks", "coding ninjas"],
-        images: [
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/b693956cdea637352c418142c957574f67f84e4c.jpeg?alt=media&token=40d60907-6190-45f1-814a-be82b8adab33",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/3e170696ee8bcc26ecb1c967adddaa3b728a427a.jpeg?alt=media&token=2328b0ec-3c49-42ee-ba52-e1a74d1c9d2f",
-          "https://firebasestorage.googleapis.com/v0/b/codex-website-6a27d.appspot.com/o/01ef0c7a2e3a71e00e3c5fb6556a1e5f164628cd.jpeg?alt=media&token=0408d9e1-c029-40ac-92e1-a3bdfcb79a91",
-        ],
-        link: "https://github.com",
-        status: "past",
-      },
-    ],
+  let [categories, setCategories] = useState({
+    Live: [],
+    Upcoming: [],
+    Past: [],
   });
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
+
+  const fetchEvents = async () => {
+    try {
+      const response = await fetch(
+        `https://codex-backend-v2.herokuapp.com/events`
+      );
+      const events = await response.json();
+      const groupedEvents = groupBy(events, "status");
+      setCategories({
+        Live: groupedEvents?.live || [],
+        Upcoming: groupedEvents?.upcoimg || [],
+        Past: groupedEvents?.past || [],
+      });
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="py-16">
@@ -184,41 +164,47 @@ export default function Events() {
             </Tab.List>
           </div>
           <Tab.Panels className="py-12">
-            {Object.values(categories).map((events, idx) => (
-              <Tab.Panel key={idx}>
-                {events.map(
-                  (
-                    {
-                      id,
-                      title,
-                      status,
-                      description,
-                      organizers,
-                      images,
-                      link,
-                    },
-                    index
-                  ) => (
-                    <Event
-                      key={id}
-                      reverse={index & 1}
-                      title={title}
-                      status={status}
-                      description={description}
-                      organizers={organizers}
-                      link={link}
-                      images={images}
-                    />
-                  )
-                )}
-              </Tab.Panel>
-            ))}
+            {loading ? (
+              <LoadingSkeleton />
+            ) : (
+              Object.values(categories).map((events, idx) => (
+                <Tab.Panel key={idx}>
+                  {events.length === 0 && (
+                    <h1 className="text-pastel text-center pt-8">
+                      There are no such events. Come back later.
+                    </h1>
+                  )}
+                  {events.map(
+                    (
+                      {
+                        id,
+                        name,
+                        status,
+                        description,
+                        organizers,
+                        images,
+                        link,
+                      },
+                      index
+                    ) => (
+                      <Event
+                        key={id}
+                        reverse={index & 1}
+                        title={name}
+                        status={status}
+                        description={description}
+                        organizers={organizers}
+                        link={link}
+                        images={images}
+                      />
+                    )
+                  )}
+                </Tab.Panel>
+              ))
+            )}
           </Tab.Panels>
         </Tab.Group>
       </div>
-      {/* <Event />
-      <Event reverse />
-      <Event status="past" /> */}
     </div>
   );
 }
