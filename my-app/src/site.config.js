@@ -1,11 +1,11 @@
 const shared = {
   name: "Codex",
   repo: "https://github.com/codex-iter/website-frontend",
-  website: "https://codex-iter.in",
+  website: "http://codex-frontend.vercel.app",
   title: "Codex - We code, we explore",
   description:
     "We are a group of motivated coders from ITER who wish to create an environment for anyone who wishes to begin their coding journey.",
-  image: "https://codex-iter.in/banner.png",
+  image: "http://codex-frontend.vercel.app/banner.jpg",
 };
 
 const siteConfig = {
@@ -40,7 +40,7 @@ const siteConfig = {
     description: shared.description,
     images: [
       {
-        url: "https://codex-iter.in/banner.png",
+        url: "http://codex-frontend.vercel.app/banner.png",
         width: 1200,
         height: 630,
         alt: "Codex - We code, we explore",
