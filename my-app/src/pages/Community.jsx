@@ -10,10 +10,17 @@ import { toTitleCase } from "../lib/string";
 import classNames from "../lib/classNames";
 
 const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
+  const isUrl = (str) => {
+    return str.startsWith("http");
+  };
   return (
     <div className="w-64">
       <div className="flex flex-col items-center justify-center text-center">
-        <img className="h-32 w-32 rounded-full" src={img} alt={name} />
+        <img
+          className="h-32 w-32 rounded-full"
+          src={isUrl(img) ? img : `https://${img}`}
+          alt={name}
+        />
         <h1 className="font-semibold text-2xl mt-2 text-slate-300">
           {toTitleCase(name)}
         </h1>
@@ -21,7 +28,7 @@ const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
         <div className="flex space-x-4 text-slate-500 items-center justify-center lg:justify-start mt-6">
           {github ? (
             <a
-              href={github}
+              href={isUrl(github) ? github : `https://${github}`}
               className="hover:text-slate-300"
               target="_blank"
               rel="noreferrer"
@@ -31,7 +38,7 @@ const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
           ) : null}
           {linkedin ? (
             <a
-              href={linkedin}
+              href={isUrl(linkedin) ? linkedin : `https://${linkedin}`}
               className="hover:text-slate-300"
               target="_blank"
               rel="noreferrer"
@@ -42,7 +49,7 @@ const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
 
           {twitter ? (
             <a
-              href={twitter}
+              href={isUrl(twitter) ? twitter : `https://${twitter}`}
               className="hover:text-slate-300"
               target="_blank"
               rel="noreferrer"
@@ -86,7 +93,9 @@ const Members = () => {
 
   const fetchMembers = async () => {
     try {
-      const response = await fetch(`${API_URL}/getMember`);
+      const response = await fetch(
+        "https://codex-backend-v2.herokuapp.com/members"
+      );
       const members = await response.json();
       setMembers(groupBy(members, "role"));
       setLoading(false);
@@ -107,9 +116,9 @@ const Members = () => {
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.teacher?.map(
-                ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
+                ({ id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
-                    key={_id}
+                    key={id}
                     name={name}
                     img={githubDP}
                     skill={skill}
@@ -127,9 +136,9 @@ const Members = () => {
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.coordinator?.map(
-                ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
+                ({ id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
-                    key={_id}
+                    key={id}
                     name={name}
                     img={githubDP}
                     skill={skill}
@@ -147,9 +156,9 @@ const Members = () => {
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.member?.map(
-                ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
+                ({ id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
-                    key={_id}
+                    key={id}
                     name={name}
                     img={githubDP}
                     skill={skill}
