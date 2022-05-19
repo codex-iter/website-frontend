@@ -1,45 +1,43 @@
 import React from "react";
-import Menu from "../components/Menu";
-import ContactInfo from "../components/ContactInfo";
-import github from "../assets/icons/github.svg";
-import newLogo from "../assets/images/half logo - codex.png";
+import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import siteConfig from "../site.config";
 
 const Base = ({ children }) => {
-  function handleCtaClick(event) {
-    event.preventDefault();
-    window.open("https://github.com/codex-iter");
-  }
-
   return (
-    <div>
-      <Menu />
+    <>
+      <Nav />
+      <Helmet>
+        <title>{siteConfig.title}</title>
+        <meta name="description" content={siteConfig.description} />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta property="og:title" content={siteConfig.title} />
+        <meta property="og:description" content={siteConfig.description} />
+        <meta property="og:url" content={siteConfig.siteUrl} />
+        <meta property="og:type" content={siteConfig.openGraph.type} />
+        <meta
+          property="og:image"
+          content={siteConfig.openGraph.images[0].url}
+        />
+        <meta
+          property="og:image:alt"
+          content={siteConfig.openGraph.images[0].alt}
+        />
+        <meta
+          property="og:image:width"
+          content={siteConfig.openGraph.images[0].width}
+        />
+        <meta
+          property="og:image:height"
+          content={siteConfig.openGraph.images[0].height}
+        />
+        <meta property="og:locale" content={siteConfig.openGraph.locale} />
+      </Helmet>
       {children}
-      {["/contact"].includes(window.location.pathname) ? null : (
-        <div className="container">
-          <footer>
-            <div>
-              <img style={{ width: "15vw" }} src={newLogo} alt="" />
-            </div>
-            <div>
-              <p style={{ fontSize: "2vw" }}>
-                A community of coders learning and exploring together
-              </p>
-            </div>
-            <div>
-              <ContactInfo>
-                <button
-                  className="icons-btn"
-                  style={{ backgroundColor: "#0c1b38" }}
-                  onClick={handleCtaClick}
-                >
-                  <img src={github} alt="" />
-                </button>
-              </ContactInfo>
-            </div>
-          </footer>
-        </div>
-      )}
-    </div>
+      <Footer />
+    </>
   );
 };
 
