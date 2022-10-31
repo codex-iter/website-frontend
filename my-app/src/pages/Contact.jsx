@@ -10,6 +10,17 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
+    if(name === "" || email === "" || message === "") {
+      Toastify({
+        text: "Form can't be empty!",
+        duration: 3000,
+        backgroundColor: "#56ccf2",
+        stopOnFocus: true,
+        position: "right",
+      }).showToast();
+      return;
+    }
+    
     fetch("https://codexweb-backend.herokuapp.com/api/addMessage", {
       method: "POST",
       body: JSON.stringify({
