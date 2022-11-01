@@ -34,7 +34,7 @@ const Event = ({
   organizers,
   link,
   images,
-  status = "live",
+  status = "upcoming",
 }) => {
   return (
     <section className={`py-12 ${reverse ? null : "bg-[#0c1b38]"}`}>
@@ -104,8 +104,8 @@ const LoadingSkeleton = () => {
 
 export default function Events() {
   let [categories, setCategories] = useState({
-    Live: [],
     Upcoming: [],
+    Live: [],
     Past: [],
   });
 
@@ -123,8 +123,8 @@ export default function Events() {
       const events = await response.json();
       const groupedEvents = groupBy(events, "status");
       setCategories({
-        Live: groupedEvents?.live || [],
         Upcoming: groupedEvents?.upcoimg || [],
+        Live: groupedEvents?.live || [],
         Past: groupedEvents?.past || [],
       });
       setLoading(false);
@@ -171,7 +171,9 @@ export default function Events() {
                 <Tab.Panel key={idx}>
                   {events.length === 0 && (
                     <h1 className="text-pastel text-center pt-8">
-                      There are no such events. Come back later.
+                      There are no such events. Come back later. 
+                      <br/>
+                      Till then have a look on our past events.
                     </h1>
                   )}
                   {events.map(

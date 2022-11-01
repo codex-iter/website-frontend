@@ -8,17 +8,16 @@ const Testimonial = () => {
         <div className="relative bg-pastel p-12 max-w-4xl mx-auto rounded-lg flex flex-col md:flex-row">
           <img
             className="h-32 w-32 rounded-full"
-            src="https://avatars.githubusercontent.com/u/6916170?v=4"
+            src="https://github.com/KejariwalAyush.png"
             alt="Segun"
           />
           <div className="md:ml-8 ">
-            <h1 className="font-semibold text-2xl mt-2">David Sylvian</h1>
-            <h4 className="text-sm text-slate-500">CEO, Manafon</h4>
+            <h1 className="font-semibold text-2xl mt-2">Ayush Kejariwal</h1>
+            <h4 className="text-sm text-slate-500">Head Coordinator, CODEX</h4>
             <p className="py-4">
-              Segun is a thoughtful communicator and fearless engineer. He's not
-              afraid to question assumptions, striving to deliver the best
-              experience for customers as well as keeping the codebase as
-              approachable and maintainable as possible.
+            Every person is defined by their community and here we are creating an 
+            environment where you can collaborate, learn, explore with us which 
+            enhances your coding and thinking ability.                
             </p>
           </div>
           <img

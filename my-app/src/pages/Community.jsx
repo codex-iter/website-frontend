@@ -147,7 +147,7 @@ const Members = () => {
                     twitter={twitter}
                   />
                 )
-              )}
+              ).sort(() => Math.random() - 0.5)}
             </div>
           </section>
           <section>
@@ -167,7 +167,7 @@ const Members = () => {
                     twitter={twitter}
                   />
                 )
-              )}
+              ).sort(() => Math.random() - 0.5)}
             </div>
           </section>
         </>

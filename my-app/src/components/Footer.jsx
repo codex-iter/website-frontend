@@ -11,7 +11,7 @@ export default function Footer() {
         <img src={CodexLogo} alt="codex" />
         <div className="text-center">
           <h3 className="text-slate-100 mb-8 px-8">
-            A community of coders learning and exploring together
+            A community of coders learning and exploring together.
           </h3>
           <div className="block space-x-4 sm:space-x-8">
             {navigation.map((item) => (
