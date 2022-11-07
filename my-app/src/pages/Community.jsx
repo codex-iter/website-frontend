@@ -111,8 +111,8 @@ const Members = () => {
       ) : (
         <>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
-              Teacher coordinators
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-16">
+              FACULTY CO-ORDINATORS
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.teacher?.map(
@@ -131,8 +131,8 @@ const Members = () => {
             </div>
           </section>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
-              Present Coordinators
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-16">
+              STUDENT CO-ORDINATORS
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.coordinator?.map(
@@ -151,8 +151,8 @@ const Members = () => {
             </div>
           </section>
           <section>
-            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-12">
-              Members
+            <h2 className="text-2xl tracking-tight font-extrabold text-slate-300 text-center sm:text-3xl md:text-4xl py-16">
+              CODERS
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {members.member?.map(

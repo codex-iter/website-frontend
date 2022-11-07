@@ -1,5 +1,5 @@
 import React from "react";
-import GroupMembers from "../assets/images/about.png";
+import GroupMembers from "../assets/images/about2.png";
 import siteConfig from "../site.config";
 
 const About = () => {
