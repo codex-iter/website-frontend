@@ -94,7 +94,8 @@ const Members = () => {
   const fetchMembers = async () => {
     try {
       const response = await fetch(
-        "https://codex-backend-v2.herokuapp.com/members"
+        // "https://codex-backend-v2.herokuapp.com/members"
+        `${API_URL}/members`
       );
       const members = await response.json();
       setMembers(groupBy(members, "role"));
@@ -178,7 +179,7 @@ const Members = () => {
 
 const Almunus = () => {
   const [loading, setLoading] = useState(true);
-  const [almunus, setAlmunus] = useState([]);
+  const [almunus, setAlmunus] = useState({});
 
   useEffect(() => {
     fetchAlmunus();
@@ -186,9 +187,13 @@ const Almunus = () => {
 
   const fetchAlmunus = async () => {
     try {
-      const response = await fetch(`${API_URL}/getAlumni`);
+      // const response = await fetch(`${API_URL}/members`);
+      const response = await fetch(
+        `${API_URL}/members`
+      );
       const almunus = await response.json();
-      setAlmunus(almunus);
+      // setAlmunus(almunus);
+      setAlmunus(groupBy(almunus, "role"));
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -206,7 +211,7 @@ const Almunus = () => {
               Our Alumni
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
-              {almunus?.map(
+              {almunus.alumni?.map(
                 ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
                   <UserCard
                     key={_id}

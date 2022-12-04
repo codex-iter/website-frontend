@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import classNames from "../lib/classNames";
 import groupBy from "../lib/groupBy";
+import { API_URL } from "../lib/constants";
 
 const EventSilder = ({ images, className }) => {
   const settings = {
@@ -118,7 +119,8 @@ export default function Events() {
   const fetchEvents = async () => {
     try {
       const response = await fetch(
-        `https://codex-backend-v2.herokuapp.com/events`
+        // `https://codex-backend-v2.herokuapp.com/events`
+        `${API_URL}/events`
       );
       const events = await response.json();
       const groupedEvents = groupBy(events, "status");
