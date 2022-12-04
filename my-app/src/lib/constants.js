@@ -1,3 +1,3 @@
-const API_URL = "https://codexweb-backend.herokuapp.com/api";
+const API_URL = "https://api-v2.codex-iter.in";
 
 export { API_URL };

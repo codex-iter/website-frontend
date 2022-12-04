@@ -21,7 +21,7 @@ const Contact = () => {
       return;
     }
     
-    fetch("https://codexweb-backend.herokuapp.com/api/addMessage", {
+    fetch("https://api-v2.codex-iter.in/addMessage", {
       method: "POST",
       body: JSON.stringify({
         name: name,
