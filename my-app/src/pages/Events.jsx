@@ -125,7 +125,7 @@ export default function Events() {
       const events = await response.json();
       const groupedEvents = groupBy(events, "status");
       setCategories({
-        Upcoming: groupedEvents?.upcoimg || [],
+        Upcoming: groupedEvents?.upcoming || [],
         Live: groupedEvents?.live || [],
         Past: groupedEvents?.past || [],
       });
