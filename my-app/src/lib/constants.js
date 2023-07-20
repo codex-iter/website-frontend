@@ -1,3 +1,3 @@
-const API_URL = "https://api-v2.codex-iter.in";
+const API_URL = "https://website-backend-blue.vercel.app";
 
 export { API_URL };
