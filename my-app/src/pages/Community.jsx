@@ -223,7 +223,7 @@ const Almunus = () => {
                     twitter={twitter}
                   />
                 )
-              )}
+              ).sort(() => Math.random() - 0.5)}
             </div>
           </section>
         </>
