@@ -20,8 +20,11 @@ const EventSilder = ({ images, className }) => {
   return (
     <Slider {...settings} className={className}>
       {images.map((img, index) => (
-        <div key={index} className="cursor-pointer">
-          <img className="rounded-lg" src={img} alt={img} />
+        <div key={index} className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
+          <div className="">
+            <img className="m-auto h-[250px]" src={img} alt={img} />
+          </div>
+          
         </div>
       ))}
     </Slider>
