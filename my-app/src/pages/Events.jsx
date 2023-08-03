@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import classNames from "../lib/classNames";
 import groupBy from "../lib/groupBy";
 import { API_URL } from "../lib/constants";
+import secureLocalStorage from "react-secure-storage";
 
 const EventSilder = ({ images, className }) => {
   const settings = {
@@ -116,8 +117,8 @@ export default function Events() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if(localStorage.getItem("events")) {
-      setCategories(JSON.parse(localStorage.getItem("events")));
+    if(secureLocalStorage.getItem("events")) {
+      setCategories(JSON.parse(secureLocalStorage.getItem("events")));
       setLoading(false);
     }
     fetchEvents();
@@ -131,7 +132,7 @@ export default function Events() {
       );
       const events = await response.json();
       const groupedEvents = groupBy(events, "status");
-      localStorage.setItem("events", JSON.stringify(groupedEvents));
+      secureLocalStorage.setItem("events", JSON.stringify(groupedEvents));
       setCategories({
         Upcoming: groupedEvents?.upcoming || [],
         Live: groupedEvents?.live || [],
