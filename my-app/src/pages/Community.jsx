@@ -8,6 +8,7 @@ import { API_URL } from "../lib/constants";
 import groupBy from "../lib/groupBy";
 import { toTitleCase } from "../lib/string";
 import classNames from "../lib/classNames";
+import  secureLocalStorage  from  "react-secure-storage";
 
 const UserCard = ({ name, skill, img, github, linkedin, twitter }) => {
   const isUrl = (str) => {
@@ -88,8 +89,8 @@ const Members = () => {
   const [members, setMembers] = useState({});
 
   useEffect(() => {
-    if(localStorage.getItem("members")){
-      setMembers(JSON.parse(localStorage.getItem("members")));
+    if(secureLocalStorage.getItem("members")){
+      setMembers(JSON.parse(secureLocalStorage.getItem("members")));
       setLoading(false);
     }
     fetchMembers();
@@ -103,8 +104,8 @@ const Members = () => {
       );
       const members = await response.json();
       let mbrs = groupBy(members, "role");
-      if(localStorage.getItem("members")){
-        let local = localStorage.getItem("members");
+      if(secureLocalStorage.getItem("members")){
+        let local = secureLocalStorage.getItem("members");
         let global = mbrs;
         global = JSON.stringify(global);
         if(local === global){
@@ -114,7 +115,7 @@ const Members = () => {
           setLoading(true);
         }
       }
-      localStorage.setItem("members", JSON.stringify(mbrs));
+      secureLocalStorage.setItem("members", JSON.stringify(mbrs));
       setMembers(groupBy(members, "role"));
       setLoading(false);
     } catch (error) {
@@ -199,8 +200,8 @@ const Almunus = () => {
   const [almunus, setAlmunus] = useState({});
 
   useEffect(() => {
-    if(localStorage.getItem("almunus")){
-      setAlmunus(JSON.parse(localStorage.getItem("almunus")));
+    if(secureLocalStorage.getItem("almunus")){
+      setAlmunus(JSON.parse(secureLocalStorage.getItem("almunus")));
       setLoading(false);
     }
     fetchAlmunus();
@@ -215,8 +216,8 @@ const Almunus = () => {
       const almunus = await response.json();
       // setAlmunus(almunus);
       let alm = groupBy(almunus, "role");
-      if(localStorage.getItem("members")){
-        let local = localStorage.getItem("almunus");
+      if(secureLocalStorage.getItem("members")){
+        let local = secureLocalStorage.getItem("almunus");
         let global = alm;
         global = JSON.stringify(global);
         if(local === global){
@@ -226,7 +227,7 @@ const Almunus = () => {
           setLoading(true);
         }
       }
-      localStorage.setItem("almunus", JSON.stringify(alm));
+      secureLocalStorage.setItem("almunus", JSON.stringify(alm));
       setAlmunus(groupBy(almunus, "role"));
       setLoading(false);
     } catch (error) {
