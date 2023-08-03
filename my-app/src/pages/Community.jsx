@@ -88,6 +88,10 @@ const Members = () => {
   const [members, setMembers] = useState({});
 
   useEffect(() => {
+    if(localStorage.getItem("members")){
+      setMembers(JSON.parse(localStorage.getItem("members")));
+      setLoading(false);
+    }
     fetchMembers();
   }, []);
 
@@ -98,6 +102,19 @@ const Members = () => {
         `${API_URL}/members`
       );
       const members = await response.json();
+      let mbrs = groupBy(members, "role");
+      if(localStorage.getItem("members")){
+        let local = localStorage.getItem("members");
+        let global = mbrs;
+        global = JSON.stringify(global);
+        if(local === global){
+          setLoading(false);
+          return;
+        }else{
+          setLoading(true);
+        }
+      }
+      localStorage.setItem("members", JSON.stringify(mbrs));
       setMembers(groupBy(members, "role"));
       setLoading(false);
     } catch (error) {
@@ -182,6 +199,10 @@ const Almunus = () => {
   const [almunus, setAlmunus] = useState({});
 
   useEffect(() => {
+    if(localStorage.getItem("almunus")){
+      setAlmunus(JSON.parse(localStorage.getItem("almunus")));
+      setLoading(false);
+    }
     fetchAlmunus();
   }, []);
 
@@ -193,6 +214,19 @@ const Almunus = () => {
       );
       const almunus = await response.json();
       // setAlmunus(almunus);
+      let alm = groupBy(almunus, "role");
+      if(localStorage.getItem("members")){
+        let local = localStorage.getItem("almunus");
+        let global = alm;
+        global = JSON.stringify(global);
+        if(local === global){
+          setLoading(false);
+          return;
+        }else{
+          setLoading(true);
+        }
+      }
+      localStorage.setItem("almunus", JSON.stringify(alm));
       setAlmunus(groupBy(almunus, "role"));
       setLoading(false);
     } catch (error) {
@@ -212,9 +246,9 @@ const Almunus = () => {
             </h2>
             <div className="flex flex-wrap justify-center gap-8 lg:gap-12">
               {almunus.alumni?.map(
-                ({ _id, name, githubDP, linkedin, github, twitter, skill }) => (
+                ({ _id, name, githubDP, linkedin, github, twitter, skill }, index) => (
                   <UserCard
-                    key={_id}
+                    key={index}
                     name={name}
                     img={githubDP}
                     skill={skill}

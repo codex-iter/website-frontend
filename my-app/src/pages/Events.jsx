@@ -116,6 +116,10 @@ export default function Events() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if(localStorage.getItem("events")) {
+      setCategories(JSON.parse(localStorage.getItem("events")));
+      setLoading(false);
+    }
     fetchEvents();
   }, []);
 
@@ -127,6 +131,7 @@ export default function Events() {
       );
       const events = await response.json();
       const groupedEvents = groupBy(events, "status");
+      localStorage.setItem("events", JSON.stringify(groupedEvents));
       setCategories({
         Upcoming: groupedEvents?.upcoming || [],
         Live: groupedEvents?.live || [],
