@@ -63,7 +63,7 @@ const Statistics = () => {
       clearInterval(membersInterval);
       clearInterval(projectsInterval);
       clearInterval(commitsInterval);
-    }, 200);
+    }, 1000);
 
     return () => {
       clearInterval(membersInterval);
