@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import people20Regular from "@iconify/icons-fluent/people-20-regular";
 import apps20Regular from "@iconify/icons-fluent/apps-20-regular";
-import branchFork20Regular from '@iconify/icons-fluent/branch-fork-20-regular';
+import branchFork20Regular from "@iconify/icons-fluent/branch-fork-20-regular";
 import siteConfig from "../site.config";
 
 const StatsCard = ({ name, value, icon }) => {
@@ -15,27 +15,78 @@ const StatsCard = ({ name, value, icon }) => {
   );
 };
 
-export default function Statistics() {
+const Statistics = () => {
   const { stats } = siteConfig;
+  const [animatedStats, setAnimatedStats] = useState({
+    members: 0,
+    projects: 0,
+    commits: 0,
+  });
+
+  const targetStats = {
+    members: stats.members,
+    projects: stats.projects,
+    commits: stats.commits,
+  };
+
+  useEffect(() => {
+    const membersInterval = setInterval(() => {
+      setAnimatedStats((prevStats) => ({
+        ...prevStats,
+        members:
+          prevStats.members < targetStats.members
+            ? prevStats.members + 10
+            : targetStats.members,
+      }));
+    }, 50); 
+    const projectsInterval = setInterval(() => {
+      setAnimatedStats((prevStats) => ({
+        ...prevStats,
+        projects:
+          prevStats.projects < targetStats.projects
+            ? prevStats.projects + 1
+            : targetStats.projects,
+      }));
+    }, 50);
+
+    const commitsInterval = setInterval(() => {
+      setAnimatedStats((prevStats) => ({
+        ...prevStats,
+        commits:
+          prevStats.commits < targetStats.commits
+            ? prevStats.commits + 1
+            : targetStats.commits,
+      }));
+    }, 50); 
+
+    return () => {
+      clearInterval(membersInterval);
+      clearInterval(projectsInterval);
+      clearInterval(commitsInterval);
+    };
+  }, [targetStats]);
+
   return (
-    <section className="py-18 lg:py-24  bg-[#0c1b38]">
+    <section className="py-18 lg:py-24 bg-[#0c1b38]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-8 px-4 sm:px-6 lg:px-8">
         <StatsCard
           name="Members"
-          value={`${stats.members}+`}
+          value={`${animatedStats.members}+`}
           icon={people20Regular}
         />
         <StatsCard
           name="Projects"
-          value={`${stats.projects}+`}
+          value={`${animatedStats.projects}+`}
           icon={apps20Regular}
         />
         <StatsCard
           name="Commits"
-          value={`${stats.commits}K+`}
+          value={`${animatedStats.commits}K+`}
           icon={branchFork20Regular}
         />
       </div>
     </section>
   );
-}
+};
+
+export default Statistics;
