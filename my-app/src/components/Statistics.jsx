@@ -70,6 +70,7 @@ const Statistics = () => {
       clearInterval(projectsInterval);
       clearInterval(commitsInterval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
