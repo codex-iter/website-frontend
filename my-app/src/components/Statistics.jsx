@@ -59,12 +59,18 @@ const Statistics = () => {
       }));
     }, 50); 
 
+    setTimeout(() => {
+      clearInterval(membersInterval);
+      clearInterval(projectsInterval);
+      clearInterval(commitsInterval);
+    }, 200);
+
     return () => {
       clearInterval(membersInterval);
       clearInterval(projectsInterval);
       clearInterval(commitsInterval);
     };
-  }, [targetStats]);
+  }, []);
 
   return (
     <section className="py-18 lg:py-24 bg-[#0c1b38]">
