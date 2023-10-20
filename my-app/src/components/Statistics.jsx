@@ -63,13 +63,14 @@ const Statistics = () => {
       clearInterval(membersInterval);
       clearInterval(projectsInterval);
       clearInterval(commitsInterval);
-    }, 200);
+    }, 1000);
 
     return () => {
       clearInterval(membersInterval);
       clearInterval(projectsInterval);
       clearInterval(commitsInterval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
