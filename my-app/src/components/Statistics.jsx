@@ -38,7 +38,7 @@ const Statistics = () => {
             ? prevStats.members + 10
             : targetStats.members,
       }));
-    }, 50); 
+    }, 10); 
     const projectsInterval = setInterval(() => {
       setAnimatedStats((prevStats) => ({
         ...prevStats,
@@ -47,7 +47,7 @@ const Statistics = () => {
             ? prevStats.projects + 1
             : targetStats.projects,
       }));
-    }, 50);
+    }, 10);
 
     const commitsInterval = setInterval(() => {
       setAnimatedStats((prevStats) => ({
@@ -57,7 +57,7 @@ const Statistics = () => {
             ? prevStats.commits + 1
             : targetStats.commits,
       }));
-    }, 50); 
+    }, 10); 
 
     setTimeout(() => {
       clearInterval(membersInterval);
