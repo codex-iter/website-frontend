@@ -17,7 +17,7 @@ const siteConfig = {
     stats: {
         members: 100,
         commits: 2.1,
-        projects: 25,
+        projects: 35,
         workshops: 18,
     },
     newsletterUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdOp_wsPsjwFvxhSRECAxBsUGeL2s4cjJ1SghNLgNPg7f8bHQ/viewform",
@@ -28,6 +28,8 @@ const siteConfig = {
         github: "https://github.com/codex-iter",
         facebook: "https://www.facebook.com/codexiter",
         linkedin: "https://www.linkedin.com/company/codex-iter",
+        telegram: "https://telegram.me/codex4all",
+        twitter: "https://twitter.com/iterCodex",
     },
     openGraph: {
         type: "website",
