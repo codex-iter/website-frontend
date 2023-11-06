@@ -84,7 +84,7 @@ const Event = ({
             target="_blank"
             rel="noreferrer"
           >
-            Visit website
+            {status==="upcoming" ? "Register" : "Visit website"}
           </a>
         </div>
         <EventSilder className="w-full md:w-1/3" images={images} />

@@ -5,6 +5,7 @@ import linkedinIcon from "@iconify/icons-cib/linkedin-in";
 import youtubeIcon from "@iconify/icons-cib/youtube";
 import facebookIcon from "@iconify/icons-cib/facebook";
 import instagramIcon from "@iconify/icons-cib/instagram";
+import twitterIcon from "@iconify/icons-cib/twitter";
 import siteConfig from "../site.config";
 
 const ContactInfo = ({ className }) => {
@@ -55,6 +56,14 @@ const ContactInfo = ({ className }) => {
         rel="noreferrer"
       >
         <Icon icon={facebookIcon} className="h-6 w-6" />
+      </a>
+      <a
+        href={contacts.twitter}
+        className="hover:text-slate-300"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon={twitterIcon} className="h-6 w-6" />
       </a>
     </div>
   );

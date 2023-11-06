@@ -5,6 +5,7 @@ import siteConfig from "../site.config";
 import banner from "../assets/images/banner.png";
 import { Icon } from "@iconify/react";
 import githubIcon from "@iconify/icons-cib/github";
+import telegramIcon from "@iconify/icons-cib/telegram";
 
 export default function Hero() {
   const containerVariants = {
@@ -46,6 +47,8 @@ export default function Hero() {
             </div>
 
             <div className="mt-12 sm:flex sm:justify-center lg:justify-start">
+              
+              {/* Visit Github Button */}
               <div className="rounded-lg shadow">
                 <a
                   href={siteConfig.contacts.github}
@@ -58,6 +61,22 @@ export default function Hero() {
                 </a>
               </div>
             </div>
+
+            <div className="mt-4 sm:flex sm:justify-center lg:justify-start">
+              {/* Join Community Button */}
+              <div className="rounded-lg shadow">
+                <a
+                  href={siteConfig.contacts.telegram}
+                  className="w-full flex items-center justify-center px-6 py-2 border border-transparent text-base font-semibold rounded-lg text-slate-800 bg-secondary hover:scale-105 will-change-transform transition-transform md:py-3 md:text-lg md:px-6"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Icon icon={telegramIcon} className="h-6 w-6 mr-2" />
+                  Join community
+                </a>
+              </div>
+            </div>
+
           </motion.div>
           <motion.div
             className="h-full lg:mt-0 flex items-center justify-center lg:w-1/2"
