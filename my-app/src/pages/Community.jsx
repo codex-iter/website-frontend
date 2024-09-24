@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Tab } from "@headlessui/react";
+import { TabGroup, TabPanels, TabPanel, Tab, TabList } from "@headlessui/react";
 import { Icon } from "@iconify/react";
 import githubIcon from "@iconify/icons-cib/github";
 import twitterIcon from "@iconify/icons-cib/twitter";
@@ -278,8 +278,8 @@ export default function Community() {
         </h1>
 
         <div className="w-full py-12 sm:px-0">
-          <Tab.Group>
-            <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1 max-w-md mx-auto">
+          <TabGroup>
+            <TabList className="flex space-x-1 rounded-xl bg-blue-900/20 p-1 max-w-md mx-auto">
               {categories.map((category) => (
                 <Tab
                   key={category}
@@ -296,15 +296,15 @@ export default function Community() {
                   {category}
                 </Tab>
               ))}
-            </Tab.List>
-            <Tab.Panels className="mt-2">
+            </TabList>
+            <TabPanels className="mt-2">
               {categories.map((posts, idx) => (
-                <Tab.Panel key={idx}>
+                <TabPanel key={idx}>
                   {posts === "Members" ? <Members /> : <Almunus />}
-                </Tab.Panel>
+                </TabPanel>
               ))}
-            </Tab.Panels>
-          </Tab.Group>
+            </TabPanels>
+          </TabGroup>
         </div>
       </div>
     </div>

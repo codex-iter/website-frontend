@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Tab } from "@headlessui/react";
+import { Tab, TabGroup, TabPanels, TabPanel, TabList } from "@headlessui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,16 +19,21 @@ const EventSilder = ({ images, className }) => {
   };
 
   return (
-    <Slider {...settings} className={className}>
-      {images.map((img, index) => (
-        <div key={index} className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
-          <div className="">
-            <img className="m-auto h-[250px]" src={img} alt={img} />
-          </div>
-          
+    images.length>1?<Slider {...settings} className={className}>
+    {images.map((img, index) => (
+      <div key={index} className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
+        <div className="">
+          <img className="m-auto h-[250px]" src={img} alt={img} />
         </div>
-      ))}
-    </Slider>
+        
+      </div>
+    ))}
+  </Slider>:<div className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
+        <div className="">
+          <img className="m-auto h-[250px]" src={images[0]} alt={images[0]} />
+        </div>
+        
+      </div>
   );
 };
 
@@ -153,9 +158,9 @@ export default function Events() {
       </div>
 
       <div className="w-full py-12">
-        <Tab.Group>
+        <TabGroup>
           <div className="px-4 sm:px-6 lg:px-8">
-            <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1 max-w-md mx-auto">
+            <TabList className="flex space-x-1 rounded-xl bg-blue-900/20 p-1 max-w-md mx-auto">
               {Object.keys(categories).map((category) => (
                 <Tab
                   key={category}
@@ -172,14 +177,14 @@ export default function Events() {
                   {category}
                 </Tab>
               ))}
-            </Tab.List>
+            </TabList>
           </div>
-          <Tab.Panels className="py-12">
+          <TabPanels className="py-12">
             {loading ? (
               <LoadingSkeleton />
             ) : (
               Object.values(categories).map((events, idx) => (
-                <Tab.Panel key={idx}>
+                <TabPanel key={idx}>
                   {events.length === 0 && (
                     <h1 className="text-pastel text-center pt-8">
                       There are no such events. Come back later. 
@@ -212,11 +217,11 @@ export default function Events() {
                       />
                     )
                   )}
-                </Tab.Panel>
+                </TabPanel>
               ))
             )}
-          </Tab.Panels>
-        </Tab.Group>
+          </TabPanels>
+        </TabGroup>
       </div>
     </div>
   );
