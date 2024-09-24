@@ -15,9 +15,9 @@ const siteConfig = {
     titleTemplate: "%s - Codex",
     description: shared.description,
     stats: {
-        members: 100,
-        commits: 2.1,
-        projects: 35,
+        members: 120,
+        commits: 2.3,
+        projects: 38,
         workshops: 18,
     },
     newsletterUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdOp_wsPsjwFvxhSRECAxBsUGeL2s4cjJ1SghNLgNPg7f8bHQ/viewform",
