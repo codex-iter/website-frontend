@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/404";
+import Community from "./pages/Community";
+import ContactForm from "./pages/Contact";
+import Events from "./pages/Events";
+import Base from "./layouts/Base";
+import Subscribe from "./components/Subscribe";
+import { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [isVisible, setIsVisible] = useState(false);  
+  
+  const handleSetVisible = (value)=>{
+    setIsVisible(value);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="bg-primary">
+      {isVisible&&<Subscribe handle={handleSetVisible} />}
+      <BrowserRouter>
+        <Base>
+          <Routes>
+            <Route path="/" element={<Home handle={handleSetVisible} />} />
+            <Route path="/about-us" element={<About handle={handleSetVisible} />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/contact-us" element={<ContactForm />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Base>
+      </BrowserRouter>
+    </div>
+  );
 }
-
-export default App

@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link
       rel="icon"
-      href="/favicon.ico"
+      href="%PUBLIC_URL%/favicon.ico"
       style="background-color: black"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,11 +15,11 @@
     <meta name="googlebot" content="index,follow" />
     <meta property="og:title" content="Codex - We code, we explore" />
     <meta property="og:description" content="We are a group of motivated coders from ITER who wish to create an environment for anyone who wishes to begin their coding journey." />
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="%PUBLIC_URL%" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="/banner.jpg"
+      content="%PUBLIC_URL%/banner.jpg"
     />
     <meta
       property="og:image:alt"
@@ -34,11 +34,12 @@
       content="630"
     />
     <meta property="og:locale" content="en_IN" />
-    <link rel="apple-touch-icon" href="/init-logo-bg.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/init-logo-bg.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
+
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
