@@ -1,8 +1,7 @@
 import React from "react";
 import GroupMembers from "../assets/images/about2.png";
-import siteConfig from "../site.config";
 
-const About = () => {
+const About = (props) => {
   return (
     <section className="pb-12">
       <div className="flex items-center justify-center">
@@ -30,14 +29,12 @@ const About = () => {
           <h2 className="mb-6 text-3xl text-center tracking-tight font-bold sm:text-4xl text-white mt-28">
             Join our monthly newsletter
           </h2>
-          <a
-            href={siteConfig.newsletterUrl}
+          <button
+            onClick={()=>props.handle(true)}
             className="w-full max-w-xs mx-auto flex items-center justify-center px-8 py-2 border border-transparent text-lg font-semibold rounded-lg text-slate-800 bg-secondary hover:scale-105 will-change-transform transition-transform md:py-3 md:text-lg md:px-4"
-            target="_blank"
-            rel="noreferrer"
           >
             Subscribe
-          </a>
+          </button>
         </div>
       </div>
     </section>
