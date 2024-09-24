@@ -7,6 +7,7 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 import "../styles/newsletter.css";
+import Newsletter from "../components/Newsletter";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 const maxWidth = 800;
@@ -47,8 +48,20 @@ const NewsletterPage = () => {
     if (pageNumber - 1 >= 1) setPageNumber(pageNumber - 1);
   };
 
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
+
   return (
     <div className="text-white flex flex-col justify-center">
+      <h1 className="text-4xl tracking-tight my-6 font-extrabold text-pastel text-center sm:text-5xl md:text-6xl">
+          Newsletters
+      </h1>
+      <div>
+          DROP DOWN HERE
+      </div>
       <div className="flex justify-center">
         <div className="flex justify-center gap-12">
           <button onClick={backward}><IoChevronBack size={25} /></button>
@@ -78,6 +91,9 @@ const NewsletterPage = () => {
           {pageNumber} of {numPages}
           <button onClick={forward}><IoChevronForward size={25} /></button>
         </div>
+      </div>
+      <div className="my-6">
+        <Newsletter />
       </div>
     </div>
   );
