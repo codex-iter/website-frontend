@@ -8,8 +8,6 @@ import Events from "./pages/Events";
 import Base from "./layouts/Base";
 import Subscribe from "./components/Subscribe";
 import { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);  

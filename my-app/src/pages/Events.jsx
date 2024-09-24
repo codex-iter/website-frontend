@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Tab, TabGroup, TabPanels, TabPanel, TabList } from "@headlessui/react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import classNames from "../lib/classNames";
 import groupBy from "../lib/groupBy";
 import { API_URL } from "../lib/constants";
@@ -17,16 +19,21 @@ const EventSilder = ({ images, className }) => {
   };
 
   return (
-    <Slider {...settings} className={className}>
-      {images.map((img, index) => (
-        <div key={index} className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
-          <div className="">
-            <img className="m-auto h-[250px]" src={img} alt={img} />
-          </div>
-          
+    images.length>1?<Slider {...settings} className={className}>
+    {images.map((img, index) => (
+      <div key={index} className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
+        <div className="">
+          <img className="m-auto h-[250px]" src={img} alt={img} />
         </div>
-      ))}
-    </Slider>
+        
+      </div>
+    ))}
+  </Slider>:<div className="cursor-pointer max-h-[250px] min-h-[250px] overflow-hidden flex justify-center">
+        <div className="">
+          <img className="m-auto h-[250px]" src={images[0]} alt={images[0]} />
+        </div>
+        
+      </div>
   );
 };
 
