@@ -8,6 +8,7 @@ import Events from "./pages/Events";
 import Base from "./layouts/Base";
 import Subscribe from "./components/Subscribe";
 import { useState } from "react";
+import NewsletterPage from "./pages/NewsletterPage";
 
 export default function App() {
   const [isVisible, setIsVisible] = useState(false);  
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact-us" element={<ContactForm />} />
+            <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Base>
