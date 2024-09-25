@@ -6,6 +6,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { API_URL } from "../lib/constants"; 
+import { FaRegEye } from "react-icons/fa";
 
 import "../styles/newsletter.css";
 import Newsletter from "../components/Newsletter";
@@ -22,6 +23,7 @@ const NewsletterPage = () => {
   const [containerRef, setContainerRef] = useState(null);
   const [containerWidth, setContainerWidth] = useState();
   const [loading, setLoading] = useState(true);
+  const [views, setViews] = useState(0);
 
   // Memoize the options object to prevent unnecessary reloads
   const options = useMemo(
@@ -75,6 +77,7 @@ const NewsletterPage = () => {
 
       const data = await response.json();
       if(data.success){
+        setViews(data.newsletter.views);
         const pdfResponse = await fetch(data.newsletter.link);
         const blob = await pdfResponse.blob();
         const fileUrl = URL.createObjectURL(blob);
@@ -112,7 +115,7 @@ const NewsletterPage = () => {
       <h1 className="text-4xl tracking-tight my-2 font-extrabold text-pastel text-center sm:text-5xl md:text-6xl">
           Newsletters
       </h1>
-      <div className="flex justify-center mt-4 mb-8">
+      <div className="flex justify-center mt-4">
       <div className="mx-auto">
       <label htmlFor="dropdown" className="mb-2 text-lg font-medium text-gray-300 text-center">
         Select an edition:
@@ -136,6 +139,13 @@ const NewsletterPage = () => {
         <div className="h-24 w-4/6 rounded-xl bg-white/30 text-transparent mx-auto animate-pulse">
           asda
         </div>
+      }
+      {
+        !loading&&file&&
+          <div className="w-full flex gap-2 justify-center align-middle text-gray-400/60 my-4">
+            <FaRegEye size={25} className="my-auto" />
+            <span className="my-auto font-semibold">{views}</span>
+          </div>
       }
       {!loading&&file&&
       <div>
