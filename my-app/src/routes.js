@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Members from "./pages/Members";
 import Event from "./pages/Event";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Error from "./pages/404";
 import Alumni from "./pages/Alumni.jsx";
+import Newsletter from "./components/Newsletter.jsx";
 
 const AppRouter = () => {
   return (
@@ -17,8 +18,9 @@ const AppRouter = () => {
           <Route path="/members" exact element={Members} />
           <Route path="/alumni" exact element={Alumni} />
           <Route path="/about" exact element={About} />
-          <Route path="/contact" exact element={Contact} />
+          {/* <Route path="/contact" exact element={Contact} /> */}
           <Route path="/events" exact element={Event} />
+          <Route path="/newsletter" exact element={Newsletter} />
           <Route path="" element={Error} />
         </Routes>
       </Router>
