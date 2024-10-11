@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
@@ -19,7 +17,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500); // I have Adjusted loader time to 1.5 seconds for smoother transition
+    }, 1500); // Adjusted loader time to 1.5 seconds for smoother transition
 
     return () => clearTimeout(timer); // Cleaning up timer
   }, []);
@@ -29,9 +27,8 @@ export default function App() {
   return (
     <div className="bg-primary">
       {isVisible && <Subscribe handle={handleSetVisible} />}
-      {loading ? (
-        <Loader />
-      ) : (
+      <Loader loading={loading} />
+      {!loading && (
         <BrowserRouter>
           <Base>
             <Routes>
