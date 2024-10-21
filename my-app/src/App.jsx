@@ -5,11 +5,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/404";
 import Community from "./pages/Community";
-import ContactForm from "./pages/Contact";
 import Events from "./pages/Events";
 import Base from "./layouts/Base";
 import Subscribe from "./components/Subscribe";
 import Loader from "./components/Loader";
+import NewsletterPage from "./pages/NewsletterPage";
 
 // Custom hook to handle the loader
 const useLoader = (duration = 1500) => {
@@ -43,7 +43,8 @@ export default function App() {
                 <Route path="/about-us" element={<About handle={setVisible} />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/events" element={<Events />} />
-                <Route path="/contact-us" element={<ContactForm />} />
+                {/* <Route path="/contact-us" element={<ContactForm />} /> */}
+                <Route path="/newsletter" element={<NewsletterPage handle={setVisible} />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Base>
