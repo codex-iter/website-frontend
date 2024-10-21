@@ -15,7 +15,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 const maxWidth = 800;
 const resizeObserverOptions = {};
 
-const NewsletterPage = () => {
+const NewsletterPage = (props) => {
   const [file, setFile] = useState();
   const [editions, setEditions] = useState([]);
   const [numPages, setNumPages] = useState();
@@ -181,7 +181,7 @@ const NewsletterPage = () => {
       </div>
       </div>}
       <div className="my-6">
-        <Newsletter />
+        <Newsletter handle={props.handle} />
       </div>
     </div>
   );
